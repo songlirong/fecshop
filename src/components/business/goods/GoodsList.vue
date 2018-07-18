@@ -10,32 +10,32 @@
             </div>
             <ul class="shuaixuan">
                 <li>分类
-                    <select v-model="value1" class="xiala">
-                        <option
+                    <el-select v-model="value1" class="xiala">
+                        <el-option
                                 v-for="item in options1"
                                 :key="item.value1"
                                 :label="item.label"
                                 :value="item.value1">
-                        </option>
-                    </select>
+                        </el-option>
+                    </el-select>
                 </li>
                 <li>上下架
-                    <select v-model="value2" class="xiala2">
-                        <option
+                    <el-select v-model="value2" class="xiala2">
+                        <el-option
                                 v-for="item in options2"
                                 :key="item.value2"
                                 :label="item.label"
                                 :value="item.value2">
-                        </option>
-                    </select>
+                        </el-option>
+                    </el-select>
                 </li>
                 <li>
                     商家编号
-                    <input v-model="input1" placeholder="请输入订单号" class="input1">
+                    <el-input v-model="input1" placeholder="请输入订单号" class="input1"></el-input>
                 </li>
                 <li>
                     商家编号
-                    <input v-model="input2" placeholder="请输入商品编号/关键字" class="input2">
+                    <el-input v-model="input2" placeholder="请输入商品编号/关键字" class="input2"></el-input>
                 </li>
                 <li>
                     <div class="sousuo"></div>
@@ -141,8 +141,6 @@
                                 <div class="button_right">末页</div>
                             </div>
                         </div>
-
-
                     </el-tab-pane>
                     <el-tab-pane label="回收站（1）" name="second">回收站（1）</el-tab-pane>
                     <el-tab-pane label="上架（1）" name="third">上架（1）</el-tab-pane>
@@ -302,31 +300,23 @@
     }
 
     .content .shuaixuan .xiala {
-        padding-left: 5px;
-        width: 98px;
-        height: 28px;
+        width: 110px;
+        /*height: 28px;*/
         outline: none;
         border: none;
         font-size: 12px;
-        background: url("../../../assets/img/xiala1.png") no-repeat center center /100% auto;
     }
-
     .content .shuaixuan .xiala2 {
-        padding-left: 5px;
         width: 83px;
         height: 28px;
         outline: none;
         border: none;
         font-size: 12px;
-        background: url("../../../assets/img/xiala2.png") no-repeat center center /100% auto
     }
 
     .content .shuaixuan .input1 {
         width: 110px;
         height: 24px;
-        background: #f3faff;
-        border: 2px solid #ecf7ff;
-        border-radius: 10px;
         outline: none;
         font-size: 12px;
         text-align: center;
@@ -335,9 +325,6 @@
     .content .shuaixuan .input2 {
         width: 160px;
         height: 24px;
-        background: #f3faff;
-        border: 2px solid #ecf7ff;
-        border-radius: 10px;
         outline: none;
         font-size: 12px;
         text-align: center;
@@ -377,15 +364,15 @@
         height: 33px;
         background: #FD5E4E;
         border: none;
-        box-shadow: 0 0px 8px #FD5E4E;
+        box-shadow: 0 0 8px #FD5E4E;
+        padding-top: 10px;
     }
 
     .content .green {
-        width: 112px;
         height: 33px;
         background: #37DF73;
         border: none;
-        box-shadow: 0 0px 8px #37DF73;
+        box-shadow: 0 0 8px #37DF73;
         padding-top: 10px;
     }
 
@@ -393,7 +380,8 @@
         height: 33px;
         background: #30B5FE;
         border: none;
-        box-shadow: 0 0px 8px #30B5FE;
+        box-shadow: 0 0 8px #30B5FE;
+        padding-top: 10px;
     }
 
     .content .button_left {

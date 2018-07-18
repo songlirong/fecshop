@@ -242,5 +242,12 @@
         box-shadow: 0 0 8px #37DF73;
         padding-top: 10px;
     }
+    .content .red {
+        height: 33px;
+        background: #FD5E4E;
+        border: none;
+        box-shadow: 0 0 8px #FD5E4E;
+        padding-top: 10px;
+    }
 
 </style>
