@@ -227,11 +227,9 @@
 </script>
 
 <style scoped>
-
     .content {
         width: 100%;
         height: 100%;
-        padding-left: 44px;
         box-sizing: border-box;
         padding-top: 8px;
     }
@@ -249,7 +247,6 @@
         display: flex;
         justify-content: space-between;
         line-height: 46px;
-        /*background: #9acfea;*/
     }
 
     .sousuo {
@@ -260,8 +257,7 @@
     }
 
     .content .item {
-        /*border-bottom: 1px solid #30a2fe;*/
-        width: 1040px;
+        width:100%;
         height: 50px;
     }
 
@@ -276,22 +272,5 @@
 
     }
 
-    .item .picture {
-        width: 56px;
-        height: 56px;
-        background: url("../../../assets/img/sousuo.png") no-repeat center center/100% auto;
-        border-radius: 3px;
-        display: inline-block;
-    }
-
-    .item .contents {
-        width: 108px;
-        height: 40px;
-        margin-left: 10px;
-        margin-top: 7px;
-        float: right;
-        font-size: 14px;
-        line-height: 20px;
-    }
 
 </style>

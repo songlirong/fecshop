@@ -19,131 +19,133 @@
             </ul>
         </div>
         <!--主内容-->
-        <div class="content">
-            <div class="biaoti">
-                <el-breadcrumb separator="·">
-                    <el-breadcrumb-item :to="{ path: '/' }">订单管理</el-breadcrumb-item>
-                    <el-breadcrumb-item>订单列表</el-breadcrumb-item>
-                    <el-breadcrumb-item><span style="color: #30d366;font-weight: bolder">查看详情</span></el-breadcrumb-item>
-                </el-breadcrumb>
-            </div>
-            <div class="item">
-                <el-steps :active="4" align-center style="margin-bottom: 20px">
-                    <el-step title="提交订单" description="2018-03-20 12:00:02"></el-step>
-                    <el-step title="支付订单" description="2018-03-20 12:00:02"></el-step>
-                    <el-step title="商家取件" description="2018-03-20 12:00:02"></el-step>
-                    <el-step title="确认送达" description="2018-03-20 12:00:02"></el-step>
-                    <el-step title="评价"></el-step>
-                </el-steps>
-                <div class="bottom">
-                    <div class="bottom_top">
-                        <div class="col-box"></div>
-                        <span style="color:#30a3fe;">基本</span>信息
-                    </div>
-                    <div class="title">
-                        <el-table :data="tableData" style="width: 100%;font-size: 14px">
-                            <el-table-column prop="id" label="订单号" width="180"></el-table-column>
-                            <el-table-column prop="name" label="购货人：信息|留言" width="150"></el-table-column>
-                            <el-table-column prop="way" label="支付方式"></el-table-column>
-                            <el-table-column prop="data1" label="下单时间"></el-table-column>
-                            <el-table-column prop="data2" label="付款时间"></el-table-column>
-                            <el-table-column prop="type" label="订单状态"></el-table-column>
-                            <el-table-column prop="data3" label="取件时间"></el-table-column>
-                            <el-table-column prop="data4" label="送件时间"></el-table-column>
-                        </el-table>
-                    </div>
+        <div class="main-content">
+            <div style="width: 1064px;margin: auto">
+                <div class="biaoti">
+                    <el-breadcrumb separator="·">
+                        <el-breadcrumb-item :to="{ path: '/' }">订单管理</el-breadcrumb-item>
+                        <el-breadcrumb-item>订单列表</el-breadcrumb-item>
+                        <el-breadcrumb-item><span style="color: #30d366;font-weight: bolder">查看详情</span></el-breadcrumb-item>
+                    </el-breadcrumb>
                 </div>
-                <div class="bottom">
-                    <div class="bottom_top">
-                        <div class="col-box"></div>
-                        <span style="color:#30a3fe;">收货人</span>信息
-                        <i class="el-icon-edit"></i>
-                        <el-button type="primary" round class="blue">保存</el-button>
+                <div class="item">
+                    <el-steps :active="4" align-center style="margin-bottom: 20px">
+                        <el-step title="提交订单" description="2018-03-20 12:00:02"></el-step>
+                        <el-step title="支付订单" description="2018-03-20 12:00:02"></el-step>
+                        <el-step title="商家取件" description="2018-03-20 12:00:02"></el-step>
+                        <el-step title="确认送达" description="2018-03-20 12:00:02"></el-step>
+                        <el-step title="评价"></el-step>
+                    </el-steps>
+                    <div class="bottom">
+                        <div class="bottom_top">
+                            <div class="col-box"></div>
+                            <span style="color:#30a3fe;">基本</span>信息
+                        </div>
+                        <div class="title">
+                            <el-table :data="tableData" style="width: 100%;font-size: 14px">
+                                <el-table-column prop="id" label="订单号" width="180"></el-table-column>
+                                <el-table-column prop="name" label="购货人：信息|留言" width="150"></el-table-column>
+                                <el-table-column prop="way" label="支付方式"></el-table-column>
+                                <el-table-column prop="data1" label="下单时间"></el-table-column>
+                                <el-table-column prop="data2" label="付款时间"></el-table-column>
+                                <el-table-column prop="type" label="订单状态"></el-table-column>
+                                <el-table-column prop="data3" label="取件时间"></el-table-column>
+                                <el-table-column prop="data4" label="送件时间"></el-table-column>
+                            </el-table>
+                        </div>
                     </div>
-                    <div class="title">
-                        <el-table :data="tableData1" style="width: 100%;">
-                            <el-table-column prop="name" label="收货人" width="100"></el-table-column>
-                            <el-table-column prop="number" label="手机号"></el-table-column>
-                            <el-table-column prop="address" label="收货地址" width="250"></el-table-column>
-                            <el-table-column prop="data" label="送货时间"></el-table-column>
-                            <el-table-column prop="zip" label="邮政编码"></el-table-column>
-                            <el-table-column prop="email" label="电子邮件" width="180"></el-table-column>
-                        </el-table>
+                    <div class="bottom">
+                        <div class="bottom_top">
+                            <div class="col-box"></div>
+                            <span style="color:#30a3fe;">收货人</span>信息
+                            <i class="el-icon-edit"></i>
+                            <el-button type="primary" round class="blue">保存</el-button>
+                        </div>
+                        <div class="title">
+                            <el-table :data="tableData1" style="width: 100%;">
+                                <el-table-column prop="name" label="收货人" width="100"></el-table-column>
+                                <el-table-column prop="number" label="手机号"></el-table-column>
+                                <el-table-column prop="address" label="收货地址" width="250"></el-table-column>
+                                <el-table-column prop="data" label="送货时间"></el-table-column>
+                                <el-table-column prop="zip" label="邮政编码"></el-table-column>
+                                <el-table-column prop="email" label="电子邮件" width="180"></el-table-column>
+                            </el-table>
+                        </div>
                     </div>
-                </div>
-                <div class="bottom">
-                    <div class="bottom_top">
-                        <div class="col-box"></div>
-                        <span style="color:#30a3fe;">其他</span>信息
-                        <i class="el-icon-edit"></i>
-                        <el-button type="primary" round class="blue">保存</el-button>
+                    <div class="bottom">
+                        <div class="bottom_top">
+                            <div class="col-box"></div>
+                            <span style="color:#30a3fe;">其他</span>信息
+                            <i class="el-icon-edit"></i>
+                            <el-button type="primary" round class="blue">保存</el-button>
+                        </div>
+                        <div class="title">
+                            <el-table :data="tableData2" style="width: 100%;">
+                                <el-table-column prop="name" label="发票抬头:(个人普通发票)" width="200"></el-table-column>
+                                <el-table-column prop="content" label="发票内容"></el-table-column>
+                                <el-table-column prop="shibiema" label="识别码"></el-table-column>
+                                <el-table-column prop="deal" label="缺货处理" width="200"></el-table-column>
+                                <el-table-column prop="sellMessage" label="卖家留言"></el-table-column>
+                                <el-table-column prop="maiMessage" label="买家留言"></el-table-column>
+                            </el-table>
+                        </div>
                     </div>
-                    <div class="title">
-                        <el-table :data="tableData2" style="width: 100%;">
-                            <el-table-column prop="name" label="发票抬头:(个人普通发票)" width="200"></el-table-column>
-                            <el-table-column prop="content" label="发票内容"></el-table-column>
-                            <el-table-column prop="shibiema" label="识别码"></el-table-column>
-                            <el-table-column prop="deal" label="缺货处理" width="200"></el-table-column>
-                            <el-table-column prop="sellMessage" label="卖家留言"></el-table-column>
-                            <el-table-column prop="maiMessage" label="买家留言"></el-table-column>
-                        </el-table>
+                    <div class="bottom">
+                        <div class="bottom_top">
+                            <div class="col-box"></div>
+                            <span style="color:#30a3fe;">商品</span>信息
+                        </div>
+                        <div class="title">
+                            <el-table :data="tableData3" style="width: 100%;">
+                                <el-table-column label="商品名称【品牌】" width="180">
+                                    <template slot-scope="scope">
+                                        <div style="display: flex;">
+                                            <div class="shangpinbg"></div>
+                                            <span style="margin-left:10px;line-height: 50px">{{scope.row.name}}</span>
+                                        </div>
+                                    </template>
+                                </el-table-column>
+                                <el-table-column prop="number" label="货号"></el-table-column>
+                                <el-table-column prop="money1" label="价格"></el-table-column>
+                                <el-table-column prop="count" label="数量"></el-table-column>
+                                <el-table-column prop="stock" label="库存"></el-table-column>
+                                <el-table-column prop="xiaoji" label="小计"></el-table-column>
+                                <el-table-column prop="active" label="操作"></el-table-column>
+                                <el-table-column prop="money2" label="合计"></el-table-column>
+                            </el-table>
+                        </div>
                     </div>
-                </div>
-                <div class="bottom">
-                    <div class="bottom_top">
-                        <div class="col-box"></div>
-                        <span style="color:#30a3fe;">商品</span>信息
+                    <div class="bottom">
+                        <div class="bottom_top">
+                            <div class="col-box"></div>
+                            <span style="color:#30a3fe;">费用</span>信息
+                        </div>
+                        <div class="title">
+                            <el-table :data="tableData4" style="width: 100%;">
+                                <el-table-column prop="money1" label="商品总金额 "></el-table-column>
+                                <el-table-column prop="money2" label="折扣"></el-table-column>
+                                <el-table-column prop="jinbi" label="使用金币"></el-table-column>
+                                <el-table-column prop="coupon" label="使用优惠券"></el-table-column>
+                                <el-table-column prop="money3" label="订单总金额"></el-table-column>
+                                <el-table-column prop="money4" label="应付总金额"></el-table-column>
+                            </el-table>
+                        </div>
                     </div>
-                    <div class="title">
-                        <el-table :data="tableData3" style="width: 100%;">
-                            <el-table-column label="商品名称【品牌】" width="180">
-                                <template slot-scope="scope">
-                                    <div style="display: flex;">
-                                        <div class="shangpinbg"></div>
-                                        <span style="margin-left:10px;line-height: 50px">{{scope.row.name}}</span>
-                                    </div>
-                                </template>
-                            </el-table-column>
-                            <el-table-column prop="number" label="货号"></el-table-column>
-                            <el-table-column prop="money1" label="价格"></el-table-column>
-                            <el-table-column prop="count" label="数量"></el-table-column>
-                            <el-table-column prop="stock" label="库存"></el-table-column>
-                            <el-table-column prop="xiaoji" label="小计"></el-table-column>
-                            <el-table-column prop="active" label="操作"></el-table-column>
-                            <el-table-column prop="money2" label="合计"></el-table-column>
-                        </el-table>
-                    </div>
-                </div>
-                <div class="bottom">
-                    <div class="bottom_top">
-                        <div class="col-box"></div>
-                        <span style="color:#30a3fe;">费用</span>信息
-                    </div>
-                    <div class="title">
-                        <el-table :data="tableData4" style="width: 100%;">
-                            <el-table-column prop="money1" label="商品总金额 "></el-table-column>
-                            <el-table-column prop="money2" label="折扣"></el-table-column>
-                            <el-table-column prop="jinbi" label="使用金币"></el-table-column>
-                            <el-table-column prop="coupon" label="使用优惠券"></el-table-column>
-                            <el-table-column prop="money3" label="订单总金额"></el-table-column>
-                            <el-table-column prop="money4" label="应付总金额"></el-table-column>
-                        </el-table>
-                    </div>
-                </div>
-                <div class="bottom">
-                    <div class="bottom_top">
-                        <div class="col-box"></div>
-                        <span style="color:#30a3fe;">取件</span>操作
-                    </div>
-                    <div class="title">
-                        <el-table :data="tableData5" style="width: 100%;">
-                            <el-table-column prop="name" label="操作者"></el-table-column>
-                            <el-table-column prop="data" label="操作时间"></el-table-column>
-                            <el-table-column prop="zhuangtai1" label="订单状态"></el-table-column>
-                            <el-table-column prop="zhuangtai2" label="付款状态"></el-table-column>
-                            <el-table-column prop="zhuangtai3" label="发货状态"></el-table-column>
-                            <el-table-column prop="beizhu" label="备注"></el-table-column>
-                        </el-table>
+                    <div class="bottom">
+                        <div class="bottom_top">
+                            <div class="col-box"></div>
+                            <span style="color:#30a3fe;">取件</span>操作
+                        </div>
+                        <div class="title">
+                            <el-table :data="tableData5" style="width: 100%;">
+                                <el-table-column prop="name" label="操作者"></el-table-column>
+                                <el-table-column prop="data" label="操作时间"></el-table-column>
+                                <el-table-column prop="zhuangtai1" label="订单状态"></el-table-column>
+                                <el-table-column prop="zhuangtai2" label="付款状态"></el-table-column>
+                                <el-table-column prop="zhuangtai3" label="发货状态"></el-table-column>
+                                <el-table-column prop="beizhu" label="备注"></el-table-column>
+                            </el-table>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -229,49 +231,19 @@
 
 <style scoped>
 
-    .aside {
-        width: 12%;
-        min-height: 800px;
-        background: #1f262c;
-        float: left;
-        position: fixed;
-        top: 0;
-        left: 0;
-    }
-
-    .aside .logo {
-        width: 100%;
-        height: 125px;
-        background: url("../../assets/img/logo.png") no-repeat center center/100% auto;
-    }
-
-    .aside-list li {
-        width: 100%;
-        height: 72px;
-        line-height: 72px;
-    }
-
-    .content {
-        position: absolute;
-        top: 80px;
-        bottom: 0;
-        left: 18%;
-        right: 0;
-    }
-
-    .content .biaoti {
+    .main-content .biaoti {
         height: 52px;
         font-size: 12px;
         line-height: 52px;
         font-weight: bolder;
     }
 
-    .content .item {
-        width: 90%;
+    .main-content .item {
+        width:100%;
         height: 50px;
     }
 
-    .content .item .bottom {
+    .main-content .item .bottom {
         width: 100%;
     }
 

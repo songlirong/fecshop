@@ -189,10 +189,9 @@
     /*主内容*/
     .main-content {
         position: absolute;
+        width:88%;
         top:80px;
-        bottom:0;
-        left:18%;
-        right:0;
+        left:12%;
     }
     .el-input--suffix .el-input__inner {
         height: 30px;
@@ -200,6 +199,7 @@
         background: #f3faff;
         border:2px solid #e5eff8;
     }
+
     .el-input__inner{
         height: 30px;
         border-radius: 15px;
@@ -216,7 +216,7 @@
         background: white;
         font-family:Microsoft YaHei;
     }
-    .content .button_left {
+    .main-content .button_left {
         width: 54px;
         height: 20px;
         background: #edf8ff;
@@ -228,7 +228,7 @@
         margin-top: 8px;
     }
 
-    .content .button_right {
+    .main-content .button_right {
         width: 54px;
         height: 20px;
         background: #51b7fc;
@@ -240,7 +240,7 @@
         margin-top: 8px;
     }
 
-    .content .dian {
+    .main-content .dian {
         width: 4px;
         height: 4px;
         border-radius: 50%;
@@ -261,5 +261,14 @@
         margin-right: 7px;
         background: #37e06f;
         box-shadow: 0 0 2px #37e06f;
+    }
+    .el-date-editor .el-range-separator{
+        line-height: 20px;
+    }
+    .el-date-editor .el-range__icon{
+        line-height: 20px;
+    }
+    .el-date-editor .el-range-input{
+        background: #F3FAFF;
     }
 </style>

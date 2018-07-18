@@ -1,48 +1,53 @@
 <template>
     <div class="box">
-
-            <!--侧边栏-->
-            <div class="aside">
-                <div class="logo"></div>
-                <ul class="aside-list">
-                    <li>
-                        <div class="col-box"></div>
-                        <router-link to="/goods">商品列表</router-link>
-                    </li>
-                    <li>
-                        <div class="col-box"></div>
-                        <router-link to="/goods/GoodsManage">分类管理</router-link>
-                    </li>
-                    <li>
-                        <div class="col-box"></div>
-                        <router-link to="/goods/GoodsAssess">用户评价</router-link>
-                    </li>
-                </ul>
-            </div>
-            <!--主内容-->
-            <div class="content">
+        <!--侧边栏-->
+        <div class="aside">
+            <div class="logo"></div>
+            <ul class="aside-list">
+                <li>
+                    <div class="col-box"></div>
+                    <router-link to="/goods">商品列表</router-link>
+                </li>
+                <li>
+                    <div class="col-box"></div>
+                    <router-link to="/goods/GoodsManage">分类管理</router-link>
+                </li>
+                <li>
+                    <div class="col-box"></div>
+                    <router-link to="/goods/GoodsAssess">用户评价</router-link>
+                </li>
+            </ul>
+        </div>
+        <!--主内容-->
+        <div class="main-content">
+            <div style="width: 1064px;margin:0 auto">
                 <div class="biaoti">
                     <el-breadcrumb separator="·">
                         <el-breadcrumb-item :to="{ path: '/' }">商品管理</el-breadcrumb-item>
                         <el-breadcrumb-item>
                             <router-link to="/goods">商品列表</router-link>
                         </el-breadcrumb-item>
-                        <el-breadcrumb-item><span style="color: #30d366;font-weight: bolder">添加商品</span></el-breadcrumb-item>
+                        <el-breadcrumb-item><span style="color: #30d366;font-weight: bolder">添加商品</span>
+                        </el-breadcrumb-item>
                     </el-breadcrumb>
                 </div>
                 <div class="item">
                     <ul class="top">
-                        <li>
-                            <router-link to="/GoodsAdd1"><span class="btn" style="color: white">选择商品分类</span>
-                            </router-link>
-                        </li>
-                        <li>
-                            <router-link to="/GoodsAdd2"><span class="btn" style="color: white">填写商品信息</span>
-                            </router-link>
-                        </li>
-                        <li>
-                            <router-link to="/GoodsAdd3"><span class="btn">选择商品关联</span></router-link>
-                        </li>
+                        <router-link to="/GoodsAdd1">
+                            <li class="btn1">
+                                <span class="btn">选择商品分类</span>
+                            </li>
+                        </router-link>
+                        <router-link to="/GoodsAdd2">
+                            <li class="btn2">
+                                <span class="btn">填写商品信息</span>
+                            </li>
+                        </router-link>
+                        <router-link to="/GoodsAdd3">
+                            <li class="btn3">
+                                <span class="btn">选择商品关联</span>
+                            </li>
+                        </router-link>
                     </ul>
                     <div class="bottom">
                         <div style="width: 328px;height: 42px;line-height: 42px;font-size: 18px;font-weight: bolder">
@@ -59,16 +64,17 @@
                             <div class="neirong">
                                 <el-form ref="form" :model="form" label-width="80px">
                                     <el-form-item label="商品货号">
-                                    <el-input v-model="form.id" class="inputbox"></el-input>
-                                    <div class="tishi">商家货号是指商家管理商品的编号，买家不可见，最多可输入20个字符，支持输入中文、英文、字母、_、/和小数点</div>
-                                </el-form-item>
+                                        <el-input v-model="form.id" class="inputbox"></el-input>
+                                        <div class="tishi">商家货号是指商家管理商品的编号，买家不可见，最多可输入20个字符，支持输入中文、英文、字母、_、/和小数点</div>
+                                    </el-form-item>
                                     <el-form-item label="商品名称">
                                         <el-input v-model="form.name" class="inputbox"></el-input>
                                         <div class="tishi">商品标题名称长度至少1个字符，最长150个汉字</div>
                                     </el-form-item>
                                     <el-form-item label="商品简单描述">
                                         <template>
-                                            <textarea id="" cols="30" rows="10" v-model="form.desc" class="details"></textarea>
+                                            <textarea id="" cols="30" rows="10" v-model="form.desc"
+                                                      class="details"></textarea>
                                         </template>
                                     </el-form-item>
                                     <el-form-item label="价格">
@@ -132,11 +138,11 @@
                             <el-form ref="form" :model="form" label-width="80px"
                                      style="margin-top: 20px;margin-bottom: 20px">
                                 <el-form-item label="上架">
-                                <el-switch
-                                    v-model="value2"
-                                    active-color="#13ce66"
-                                    inactive-color="#ff4949">
-                            </el-switch>
+                                    <el-switch
+                                            v-model="value2"
+                                            active-color="#13ce66"
+                                            inactive-color="#ff4949">
+                                    </el-switch>
                                 </el-form-item>
                                 <el-form-item label="关键词">
                                     <el-input v-model="form.key" class="inputbox"></el-input>
@@ -148,7 +154,8 @@
                         </div>
 
                         <router-link to="/GoodsAdd1">
-                            <el-button type="primary" round style="margin-right: 20px" class="blue">上一步，选择商品分类</el-button>
+                            <el-button type="primary" round style="margin-right: 20px" class="blue">上一步，选择商品分类
+                            </el-button>
                         </router-link>
                         <router-link to="/GoodsAdd3">
                             <el-button type="primary" round class="blue">下一步，选择商品关联</el-button>
@@ -156,6 +163,7 @@
                     </div>
                 </div>
             </div>
+        </div>
     </div>
 </template>
 
@@ -171,7 +179,7 @@
                     money: '',
                     zhekou: '',
                     countent: '',
-                    key:''
+                    key: ''
                 },
                 imageUrl: '',
                 dialogImageUrl: '',
@@ -208,7 +216,7 @@
                     title: '消息',
                     message: h('p', null, [
                         h('span', null, '内容可以是 '),
-                        h('i', { style: 'color: teal' }, 'VNode')
+                        h('i', {style: 'color: teal'}, 'VNode')
                     ]),
                     showCancelButton: true,
                     confirmButtonText: '确定',
@@ -239,23 +247,7 @@
 </script>
 
 <style scoped>
-    .box{
-        position: absolute;
-        left: 0;
-        right: 0;
-        top: 0;
-        bottom: 0;
-        padding-top: 50px;
-        background: white;
-    }
-    .content {
-        position: absolute;
-        top:80px;
-        bottom:0;
-        left:18%;
-        right:0;
-        background:white;
-    }
+
     .avatar-uploader .el-upload {
         border: 1px dashed #d9d9d9;
         border-radius: 6px;
@@ -285,42 +277,19 @@
         border: 1px dashed #ccc;
     }
 
-    .aside {
-        width: 12%;
-        min-height: 800px;
-        background: #1f262c;
-        float: left;
-        position: fixed;
-        top: 0;
-        left: 0;
-    }
-
-    .aside .logo {
-        width: 100%;
-        height: 125px;
-        background: url("../../assets/img/logo.png") no-repeat center center/100% auto;
-    }
-
-    .aside-list li {
-        width: 100%;
-        height: 72px;
-        line-height: 72px;
-    }
-
-
-    .content .biaoti {
+    .main-content .biaoti {
         height: 52px;
         font-size: 12px;
         line-height: 52px;
         font-weight: bolder;
     }
 
-    .content .item {
-        width: 90%;
+    .main-content .item {
+        width: 100%;
         height: 50px;
     }
 
-    .content .item .top {
+    .main-content .item .top {
         width: 100%;
         height: 39px;
         display: flex;
@@ -330,15 +299,17 @@
         line-height: 39px;
     }
 
-    .item ul li:first-child {
+    .main-content .item .top .btn1{
         background: url("../../assets/img/add1.png") no-repeat center center/100% auto;
+        color: white;
     }
 
-    .item ul li:nth-child(2) {
+    .main-content .item .top .btn2 {
         background: url("../../assets/img/add4.png") no-repeat center center/100% auto;
+        color: white;
     }
 
-    .item ul li:last-child {
+    .main-content .item .top .btn3 {
         background: url("../../assets/img/add3.png") no-repeat center center/100% auto;
     }
 
@@ -348,13 +319,9 @@
         text-align: center;
     }
 
-    .top li .btn {
-        width: 333px;
-        height: 100%;
-        color: #000;
-    }
 
-    .content .item .bottom {
+
+    .main-content .item .bottom {
         width: 100%;
     }
 
@@ -367,15 +334,17 @@
         padding-left: 22px;
         border-bottom: 1px solid #eee;
     }
-    .bottom .col-box{
-        width:12px;
-        height:7px;
-        border-radius:5px;
-        margin-top:17px;
-        margin-left:10px;
+
+    .bottom .col-box {
+        width: 12px;
+        height: 7px;
+        border-radius: 5px;
+        margin-top: 17px;
+        margin-left: 10px;
         margin-right: 7px;
         background-color: #37e06f;
     }
+
     .bottom .title .neirong {
         width: 100%;
         height: 640px;
@@ -385,6 +354,7 @@
     .inputbox {
         width: 272px;
     }
+
     .tishi {
         font-size: 12px;
         color: #999;
@@ -399,22 +369,27 @@
         font-size: 12px;
         border-bottom: 1px solid #eee;
     }
-    .bottom .message .shangchuan{
-        width: 218px;height: 312px;background:#bbdff6;
-        background: url("../../assets/img/shangchuan.png")no-repeat center center/100% auto;
+
+    .bottom .message .shangchuan {
+        width: 218px;
+        height: 312px;
+        background: #bbdff6;
+        background: url("../../assets/img/shangchuan.png") no-repeat center center/100% auto;
     }
-    .el-icon-edit{
-        margin-left:10px;
-        font-size:24px;
-        text-align:center;
+
+    .el-icon-edit {
+        margin-left: 10px;
+        font-size: 24px;
+        text-align: center;
         width: 30px;
         height: 30px;
         border-radius: 50%;
-        background:#3bacfe;
+        background: #3bacfe;
         line-height: 30px;
         box-shadow: 0 3px 8px #48A1FF;
     }
-    .content .blue {
+
+    .main-content .blue {
         height: 30px;
         background: #30B5FE;
         border: none;
@@ -422,14 +397,15 @@
         margin-left: 20px;
         padding-top: 8px;
     }
-    .title .details{
+
+    .title .details {
         width: 350px;
-        height:84px;
-        outline:none;
-        resize:none;
+        height: 84px;
+        outline: none;
+        resize: none;
         border-radius: 5px;
         background: #f3faff;
-        border:2px solid #e5eff8;
+        border: 2px solid #e5eff8;
     }
 
 </style>

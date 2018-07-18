@@ -58,9 +58,8 @@
     .content {
         width: 100%;
         height: 100%;
-        padding-left: 44px;
         box-sizing: border-box;
-        padding-top: 28px;
+        padding-top: 8px;
     }
 
     .content .biaoti {

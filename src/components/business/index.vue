@@ -58,12 +58,13 @@
                 <div class="close"></div>
             </div>
         </div>
-            <!--侧边栏-->
-            <div class="aside">
-                <div class="logo"></div>
-            </div>
-            <!--主内容-->
-            <div class="main-content">
+        <!--侧边栏-->
+        <div class="aside">
+            <div class="logo"></div>
+        </div>
+        <!--主内容-->
+        <div class="main-content">
+            <div style="width: 1064px;margin:0 auto">
                 <div class="main-content1">
                     <div class="dianpu"></div>
                     <div class="content1-center">
@@ -206,23 +207,30 @@
                     </div>
                     <div>
                         <div style="width:180px;float: right;margin-top: 28px;display: flex;justify-content: space-between">
-                            <div style="display: flex"><div class="dian"></div>总计<span style="color:#3db0ff;font-weight: bolder">206</span>记录</div>
-                            <div style="display: flex"><div class="dian" style="background: #29c99a"></div>分<span style="font-weight:bolder;color:#29c99a;">82</span>页</div>
+                            <div style="display: flex">
+                                <div class="dian"></div>
+                                总计<span style="color:#3db0ff;font-weight: bolder">206</span>记录
+                            </div>
+                            <div style="display: flex">
+                                <div class="dian" style="background: #29c99a"></div>
+                                分<span style="font-weight:bolder;color:#29c99a;">82</span>页
+                            </div>
                         </div>
                         <el-button type="success" round class="green">导出表格</el-button>
                     </div>
-                   <div>
-                       <div style="width:400px;font-size:12px;float: right;display: flex;justify-content: space-between">
-                           <div class="button_left">首页</div>
-                           <el-pagination
-                                   layout="prev, pager, next"
-                                   :total="50">
-                           </el-pagination>
-                           <div class="button_right">末页</div>
-                       </div>
-                   </div>
+                    <div>
+                        <div style="width:400px;font-size:12px;float: right;display: flex;justify-content: space-between">
+                            <div class="button_left">首页</div>
+                            <el-pagination
+                                    layout="prev, pager, next"
+                                    :total="50">
+                            </el-pagination>
+                            <div class="button_right">末页</div>
+                        </div>
+                    </div>
                 </div>
             </div>
+        </div>
 
     </div>
 </template>
@@ -276,16 +284,7 @@
 </script>
 
 <style scoped>
-    .box{
-        position: absolute;
-        left: 0;
-        right: 0;
-        top: 0;
-        bottom: 0;
-        padding-top: 50px;
-        background: white;
-        font-family:Microsoft YaHei;
-    }
+
     .close {
         position: absolute;
         top: 17px;
@@ -294,22 +293,6 @@
         height: 14px;
         background: url("../../assets/img/close.png") no-repeat center center/100% auto;
     }
-    .aside{
-        width: 12%;
-        position: absolute;
-        top: 0;
-        bottom: 0;
-        z-index:999;
-    }
-    .main-content {
-        position: absolute;
-        top:80px;
-        bottom:0;
-        left:18%;
-        right:0;
-        background: white;
-    }
-
     .main-content1 {
         width: 100%;
         height: 135px;
@@ -342,7 +325,6 @@
         border-right: 1px solid #30a2fe;
         padding-left: 25px;
         padding-right: 26px;
-        /*background: blue;*/
         box-sizing: border-box;
     }
 
@@ -352,7 +334,6 @@
         font-weight: bold;
         margin-bottom: 24px;
         margin-left: 7px;
-        /*background: yellow;*/
         line-height: 24px;
     }
 
@@ -392,7 +373,6 @@
         font-weight: bold;
         color: #82898e;
         float: left;
-        /*background: #f7e1b5;*/
     }
 
     .main-content1 .content1-right {
@@ -400,13 +380,11 @@
         width: 420px;
         height: 135px;
         padding-left: 26px;
-        /*background: blue;*/
         box-sizing: border-box;
     }
 
     .content1-right .message3 {
         height: 75px;
-        /*background: #f7e1b5;*/
         color: #bdc3c9;
         display: flex;
         flex-direction: column;
@@ -429,9 +407,8 @@
     }
 
     .main-content2 {
-        width: 1012px;
+        width:100%;
     }
-
     .main-content2 .biaoti {
         display: flex;
         justify-content: space-around;
@@ -451,7 +428,7 @@
         width: 190px;
         height: 114px;
         border-radius: 5px;
-        box-shadow: 0px 0px 15px 2px #eee;
+        box-shadow: 0 0 15px 2px #eee;
         padding-left: 17px;
         padding-top: 10px;
         box-sizing: border-box;
@@ -482,7 +459,6 @@
         display: inline-block;
         width: 14px;
         height: 14px;
-        /*margin-right: 3px;*/
         background: url("../../assets/img/jiantou1.png") no-repeat center center/100% auto;
     }
 
@@ -490,7 +466,6 @@
         display: inline-block;
         width: 14px;
         height: 14px;
-        /*margin-right: 3px;*/
         background: url("../../assets/img/jiantou2.png") no-repeat center center/100% auto;
     }
 
@@ -498,15 +473,15 @@
         display: inline-block;
         width: 14px;
         height: 14px;
-        /*margin-right: 3px;*/
         background: url("../../assets/img/jiantou3.png") no-repeat center center/100% auto;
     }
 
     .main-content3 {
-        width: 1012px;
+        width:100%;
         height: 48px;
     }
-    .main-content3 .dian{
+
+    .main-content3 .dian {
         width: 4px;
         height: 4px;
         border-radius: 50%;
@@ -515,17 +490,7 @@
         margin-top: 10px;
         margin-right: 5px;
     }
-    .main-content3 .export {
-        width: 89px;
-        height: 26px;
-        border-radius: 15px;
-        background: #37df72;
-        color: white;
-        line-height: 26px;
-        font-size: 12px;
-        text-align: center;
-        box-shadow: 0px 0px 15px 2px #eee;
-    }
+
 
     .freeze {
         position: absolute;
@@ -548,7 +513,6 @@
         border-radius: 5px;
         padding-top: 23px;
         padding-left: 29px;
-        position: relative;
     }
 
     .freeze .freeze-content1 {
@@ -587,30 +551,9 @@
         height: 26px;
         background: #37DF73;
         border: none;
-        box-shadow: 0 0px 5px #37DF73;
+        box-shadow: 0 0 5px #37DF73;
         padding-top: 8px;
         padding-left: 18px;
     }
-    .main-content .button_left{
-         width: 54px;
-         height: 20px;
-         background: #edf8ff;
-         border:2px solid #e8f6ff;
-         border-radius: 10px;
-         color: #41b2fc;
-         line-height: 18px;
-         text-align: center;
-        margin-top: 5px;
-     }
-    .main-content .button_right{
-        width: 54px;
-        height: 20px;
-        background: #51b7fc;
-        border:2px solid #51b7fc;
-        border-radius: 10px;
-        color: #fff;
-        line-height: 18px;
-        text-align: center;
-        margin-top: 5px;
-    }
+
 </style>

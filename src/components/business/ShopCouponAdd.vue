@@ -33,7 +33,8 @@
                     <el-breadcrumb separator="·">
                         <el-breadcrumb-item :to="{ path: '/' }">店铺管理</el-breadcrumb-item>
                         <el-breadcrumb-item>优惠券管理</el-breadcrumb-item>
-                        <el-breadcrumb-item><span style="color: #30d366;font-weight: bolder">添加优惠券</span></el-breadcrumb-item>
+                        <el-breadcrumb-item><span style="color: #30d366;font-weight: bolder">添加优惠券</span>
+                        </el-breadcrumb-item>
                     </el-breadcrumb>
                 </div>
                 <div class="bottom">
@@ -74,7 +75,8 @@
                                                         <el-radio v-model="radio" label="1" class="danxuan">水</el-radio>
                                                     </div>
                                                     <div>
-                                                        <el-radio v-model="radio" label="2" class="danxuan">卫浴</el-radio>
+                                                        <el-radio v-model="radio" label="2" class="danxuan">卫浴
+                                                        </el-radio>
                                                     </div>
                                                 </div>
                                             </div>
@@ -82,42 +84,66 @@
                                             <div class="left_box">
                                                 <div class="shuaixuan_top">请选择商品</div>
                                                 <div class="shuaixuan_bottom" v-if="radio==1">
-                                                    <div><el-radio v-model="radios" label="1" class="danxuan">浴室柜3423</el-radio></div>
-                                                    <div><el-radio v-model="radios" label="2" class="danxuan">晾衣架5624</el-radio></div>
-                                                    <div><el-radio v-model="radios" label="3" class="danxuan">花洒</el-radio></div>
-                                                    <div><el-radio v-model="radios" label="4" class="danxuan">坐便器</el-radio></div>
-                                                    <div><el-radio v-model="radios" label="5" class="danxuan">洁具陶瓷盆</el-radio></div>
-                                                    <div><el-radio v-model="radios" label="6" class="danxuan">其他</el-radio></div>
+                                                    <div>
+                                                        <el-radio v-model="radios" label="1" class="danxuan">浴室柜3423
+                                                        </el-radio>
+                                                    </div>
+                                                    <div>
+                                                        <el-radio v-model="radios" label="2" class="danxuan">晾衣架5624
+                                                        </el-radio>
+                                                    </div>
+                                                    <div>
+                                                        <el-radio v-model="radios" label="3" class="danxuan">花洒
+                                                        </el-radio>
+                                                    </div>
+                                                    <div>
+                                                        <el-radio v-model="radios" label="4" class="danxuan">坐便器
+                                                        </el-radio>
+                                                    </div>
+                                                    <div>
+                                                        <el-radio v-model="radios" label="5" class="danxuan">洁具陶瓷盆
+                                                        </el-radio>
+                                                    </div>
+                                                    <div>
+                                                        <el-radio v-model="radios" label="6" class="danxuan">其他
+                                                        </el-radio>
+                                                    </div>
                                                 </div>
                                                 <div v-if="radio==2">
-                                                    <div><el-radio v-model="radios" label="1" class="danxuan">浴室柜3423</el-radio></div>
-                                                    <div><el-radio v-model="radios" label="2" class="danxuan">晾衣架5624</el-radio></div>
-                                                    <div><el-radio v-model="radios" label="3" class="danxuan">花洒</el-radio></div>
+                                                    <div>
+                                                        <el-radio v-model="radios" label="1" class="danxuan">浴室柜3423
+                                                        </el-radio>
+                                                    </div>
+                                                    <div>
+                                                        <el-radio v-model="radios" label="2" class="danxuan">晾衣架5624
+                                                        </el-radio>
+                                                    </div>
+                                                    <div>
+                                                        <el-radio v-model="radios" label="3" class="danxuan">花洒
+                                                        </el-radio>
+                                                    </div>
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
-                                    <div>
-                                        <el-form-item label="*优惠券状态">
-                                            <el-select v-model="value" filterable 
-                                                       style="width: 200px;display: inline-block">
-                                                <el-option
-                                                        v-for="item in options"
-                                                        :key="item.value"
-                                                        :label="item.label"
-                                                        :value="item.value">
-                                                </el-option>
-                                            </el-select>
-                                        </el-form-item>
-                                    </div>
-
+                                </el-form-item>
+                                <el-form-item label="*优惠券状态">
+                                    <el-select v-model="value" filterable
+                                               style="width: 200px;display: inline-block">
+                                        <el-option
+                                                v-for="item in options"
+                                                :key="item.value"
+                                                :label="item.label"
+                                                :value="item.value">
+                                        </el-option>
+                                    </el-select>
                                 </el-form-item>
                             </el-row>
                         </el-form>
                     </div>
-                    <div style="margin-left: 620px;margin-top: 30px">
+                    <div style="float: right">
                         <el-button type="success" round class="green">发布活动</el-button>
-                        <router-link to="/ShopActivityEdit">
+                        <router-link to="/ShopCouponEdit">
                             <el-button type="danger" round class="red">重置</el-button>
                         </router-link>
                     </div>
@@ -132,16 +158,16 @@
         name: "ShopCouponAdd",
         data() {
             return {
-                form:{
-                    name:'',
-                    data:[new Date(2018, 6, 1, 14, 4,53), new Date(2018, 6, 20, 14, 4,53)],
-                    youhui:'',
-                    xiaofei:'',
-                    bankNumber:'',
+                form: {
+                    name: '',
+                    data: [new Date(2018, 6, 1, 14, 4, 53), new Date(2018, 6, 20, 14, 4, 53)],
+                    youhui: '',
+                    xiaofei: '',
+                    bankNumber: '',
                 },
-                radio:'1',
-                radios:'1',
-                fanwei:'1',
+                radio: '1',
+                radios: '1',
+                fanwei: '1',
                 options: [{
                     value: '选项1',
                     label: '有效'
@@ -152,7 +178,7 @@
                     value: '选项3',
                     label: '3'
                 }],
-                value:'选项1'
+                value: '选项1'
             }
         },
         methods: {}
@@ -200,44 +226,51 @@
     .content .bottom {
         width: 100%;
     }
-    .title .shuaixuan{
+
+    .title .shuaixuan {
         margin-top: 15px;
         display: flex;
     }
-    .left_box{
+
+    .left_box {
         width: 309px;
         height: 333px;
         background: #f8fcff;
-        border:2px solid #ebf6ff;
+        border: 2px solid #ebf6ff;
         padding-left: 17px;
     }
-    .title .shuaixuan .shuaixuan_top{
+
+    .title .shuaixuan .shuaixuan_top {
         line-height: 55px;
         font-size: 14px;
         color: #9bd2fd;
     }
-    .bottom .jiantou{
+
+    .bottom .jiantou {
         width: 42px;
         height: 14px;
         margin-top: 33px;
         background: url("../../assets/img/jiantou.png");
     }
-    .shuaixuan_bottom .danxuan{
+
+    .shuaixuan_bottom .danxuan {
         width: 20px;
         height: 20px;
         font-size: 12px;
     }
-    .content .red{
+
+    .content .red {
         height: 35px;
         background: #FD5E4E;
-        border:none;
-        box-shadow:0 0px 8px #FD5E4E;
+        border: none;
+        box-shadow: 0 0px 8px #FD5E4E;
     }
-    .content .green{
+
+    .content .green {
         height: 35px;
         background: #37DF73;
-        border:none;
-        box-shadow:0 0px 8px #37DF73;
+        border: none;
+        box-shadow: 0 0px 8px #37DF73;
         margin-right: 20px;
     }
 

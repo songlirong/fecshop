@@ -42,21 +42,21 @@
                         @row-click="handleSelectionChange"
                         @selection-change="selsChange">
                     <el-table-column type="selection" width="50"></el-table-column>
-                    <el-table-column label="优惠券名称" width="250">
+                    <el-table-column label="优惠券名称" width="200" show-overflow-tooltip>
                         <template slot-scope="scope">{{ scope.row.name }}</template>
                     </el-table-column>
-                    <el-table-column prop="money1" label="优惠金额">
+                    <el-table-column prop="money1" label="优惠金额" show-overflow-tooltip>
                     </el-table-column>
-                    <el-table-column prop="money2" label="消费金额">
+                    <el-table-column prop="money2" label="消费金额" show-overflow-tooltip>
                     </el-table-column>
-                    <el-table-column prop="data1" label="开始时间" width="150">
+                    <el-table-column prop="data1" label="开始时间" show-overflow-tooltip>
                     </el-table-column>
-                    <el-table-column prop="data2" label="结束时间" width="150">
+                    <el-table-column prop="data2" label="结束时间" show-overflow-tooltip>
                     </el-table-column>
                     <el-table-column label="优惠券状态">
                         <template slot-scope="scope"><span class="" style="color: #36dd7c">{{ scope.row.type }}</span></template>
                     </el-table-column>
-                    <el-table-column prop="operation" label="操作" width="140" show-overflow-tooltip>
+                    <el-table-column prop="operation" label="操作"  show-overflow-tooltip>
                         <template slot-scope="scope">
                             <el-button @click="handleClick1(scope.row)" type="text" size="small">编辑</el-button>
                             <span style="color: #eaebec">|</span>
@@ -210,7 +210,7 @@
 <style scoped>
 
     .content {
-        width: 90%;
+        width: 100%;
         height: 100%;
         box-sizing: border-box;
         padding-top: 8px;
