@@ -226,7 +226,7 @@
 <style scoped>
 
     .content {
-        width: 94%;
+        width: 100%;
         height: 100%;
         box-sizing: border-box;
         padding-top: 8px;

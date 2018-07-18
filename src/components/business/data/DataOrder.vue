@@ -66,7 +66,7 @@
                 </li>
             </ul>
             <div class="item1">
-                <div class="box">
+                <div class="box1">
                     <div class="title">
                         <div class="title_left">评价汇总</div>
                         <div class="title_right">
@@ -104,7 +104,7 @@
                         <div :class="['contents',{active:now==3}]">一年</div>
                     </div>
                 </div>
-                <div class="box">
+                <div class="box1">
                     <div class="title">
                         <div class="title_left">投诉汇总</div>
                         <div class="title_right">
@@ -245,7 +245,6 @@
     .content {
         width: 100%;
         height: 100%;
-        padding-left: 44px;
         box-sizing: border-box;
         padding-top: 8px;
     }
@@ -297,10 +296,10 @@
         justify-content: space-between;
         border-bottom: 1px solid #eee;
     }
-    .content .item1 .box {
+    .content .item1 .box1 {
         width: 485px;
     }
-    .content .item1 .box .title {
+    .content .item1 .box1 .title {
         width: 100%;
         height: 52px;
         line-height: 52px;
@@ -308,13 +307,19 @@
         justify-content: space-between;
         border-bottom: 1px solid #30A6FE;
     }
-    .item1 .box .title_left {
+    .item1 .box1 .title_left {
         width: 88px;
         text-align: center;
         color: #30A6FE;
         font-weight: bolder;
     }
-    .item1 .box .title_right {
+    .item1 .box1 .title_right {
+        width: 250px;
+        color: #30A6FE;
+        display: flex;
+        justify-content: space-between;
+    }
+    .item2 .title_right {
         width: 250px;
         color: #30A6FE;
         display: flex;
@@ -327,27 +332,27 @@
     .title_right .active {
         border-bottom: 2px solid #30A6FE;
     }
-    .content .item1 .box .bottom {
+    .content .item1 .box1 .bottom {
          width: 100%;
          padding-top: 10px;
          padding-bottom: 20px;
          box-sizing: border-box;
      }
-    .content .item1 .box .bottom .contents {
+    .content .item1 .box1 .bottom .contents {
         width: 100%;
         display: none;
     }
-    .item1 .box .bottom .contents .tu1 {
+    .item1 .box1 .bottom .contents .tu1 {
         width: 100%;
         height: 330px;
         background: url("../../../assets/img/tu1.png") no-repeat center center /100% auto;
     }
-    .item1 .box .bottom .contents .tu2 {
+    .item1 .box1 .bottom .contents .tu2 {
         width: 100%;
         height: 330px;
         background: url("../../../assets/img/tu2.png") no-repeat center center /100% auto;
     }
-    .content .item1 .box .bottom .active {
+    .content .item1 .box1 .bottom .active {
         display: block;
     }
     .content .item2 {

@@ -15,12 +15,12 @@
                     </div>
                     <div class="title">
                         <el-form ref="form" :model="form" label-width="150px">
-                            <el-row style="width:850px;">
+                            <el-row style="width:800px;">
                                 <el-form-item label="*LOGO缩略图">
                                     <div style="display: flex;justify-content: space-between">
                                         <el-input v-model="form.url1"
                                                   placeholder="http:test1.ecmoban.com/seller_imgs/seller_logo/seller_logo1.jpg"
-                                                  style="width:500px">
+                                                  style="width:480px">
                                         </el-input>
                                         <el-button type="success" round @click="" class="green">上传</el-button>
                                         <span style="color:#41b2fc">模板样式</span>
@@ -31,7 +31,7 @@
                                     <div style="display: flex;justify-content: space-between">
                                         <el-input v-model="form.url2"
                                                   placeholder="http:test1.ecmoban.com/seller_imgs/seller_logo/seller_logo1.jpg"
-                                                  style="width:500px"></el-input>
+                                                  style="width:480px"></el-input>
                                         <el-button type="success" round @click="" class="green">上传</el-button>
                                         <span style="color:#41b2fc">模板样式</span>
                                     </div>
@@ -84,7 +84,7 @@
 
 <style scoped>
     .content {
-        width: 90%;
+        width: 100%;
         height: 100%;
         box-sizing: border-box;
         padding-top: 8px;

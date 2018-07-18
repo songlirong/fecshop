@@ -185,7 +185,6 @@
         bottom:0;
         left:18%;
         right:0;
-        background: white;
     }
 
     .content .biaoti {

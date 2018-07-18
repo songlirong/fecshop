@@ -19,114 +19,121 @@
             </ul>
         </div>
         <!--主内容-->
-        <div class="content">
-            <div class="biaoti">
-                <el-breadcrumb separator="·">
-                    <el-breadcrumb-item :to="{ path: '/' }">商品管理</el-breadcrumb-item>
-                    <el-breadcrumb-item>
-                        <router-link to="/goods">商品列表</router-link>
-                    </el-breadcrumb-item>
-                    <el-breadcrumb-item><span style="color: #30d366;font-weight: bolder">添加商品</span>
-                    </el-breadcrumb-item>
-                </el-breadcrumb>
-            </div>
-            <div class="item">
-                <ul class="top">
-                    <li>
-                        <router-link to="/GoodsAdd1"><span class="btn">选择商品分类</span>
-                        </router-link>
-                    </li>
-                    <li>
-                        <router-link to="/GoodsAdd2"><span class="btn">填写商品信息</span></router-link>
-                    </li>
-                    <li>
-                        <router-link to="/GoodsAdd3"><span class="btn">选择商品关联</span></router-link>
-                    </li>
-                </ul>
-                <ul class="shuaixuan">
-                    <li>
-                        <el-select v-model="value1" placeholder="请选择分类" style="width: 120px">
-                            <el-option
-                                    v-for="item in options1"
-                                    :key="item.value1"
-                                    :label="item.label"
-                                    :value="item.value1">
-                            </el-option>
-                        </el-select>
-                    </li>
-                    <li>
-                        <el-input v-model="input" placeholder="请输入关键词搜索" style="width: 200px"></el-input>
-                    </li>
-                    <li>
-                        <div class="sousuo"></div>
-                    </li>
-                </ul>
-                <div class="bottom">
-                    <div class="title">
-                        <span style="font-size: 14px;color: #CECBCB">您当前选择的商品类别是：</span>
-                        <el-breadcrumb separator="/" style="display: inline-block">
-                            <el-breadcrumb-item>洗衣</el-breadcrumb-item>
-                            <el-breadcrumb-item>羽绒服清洗</el-breadcrumb-item>
-                        </el-breadcrumb>
-                    </div>
-                    <div class="select">
-                        <div>
-                            <div class="left_box">
-                                <div class="select_box">
-                                    <div class="col-box"></div>
-                                    可选择商品
-                                </div>
-                                <div class="shuaixuan_bottom">
-                                    <div>
-                                        <el-radio v-model="radio" label="1" class="danxuan">羽绒服</el-radio>
-                                    </div>
-                                    <div>
-                                        <el-radio v-model="radio" label="2" class="danxuan">卫浴</el-radio>
-                                    </div>
-                                </div>
-                            </div>
-                            <div>
-                                <el-radio v-model="radio" label="1" class="danxuan">全选</el-radio>
-                                <el-button type="primary" round class="blue">确定</el-button>
-                            </div>
-                        </div>
-                        <div class="danshuang">
-                            <div>
-                                <el-radio v-model="radio2" label="1" class="danxuan">单向关联</el-radio>
-                            </div>
-                            <div style="margin-top: 15px">
-                                <el-radio v-model="radio2" label="2" class="danxuan">双向关联</el-radio>
-                            </div>
-                        </div>
-                        <div>
-                            <div class="left_box">
-                                <div class="select_box">
-                                    <div class="col-box"></div>
-                                    跟该商品关联的商品
-                                </div>
-                                <div class="shuaixuan_bottom" v-if="radio==1">
-                                    <div>
-                                        <el-radio v-model="radios" label="1" class="danxuan">浴室柜3423</el-radio>
-                                    </div>
-                                    <div>
-                                        <el-radio v-model="radios" label="2" class="danxuan">晾衣架5624</el-radio>
-                                    </div>
-                                    <div>
-                                        <el-radio v-model="radios" label="3" class="danxuan">花洒</el-radio>
-                                    </div>
-                                </div>
-                            </div>
-                            <div>
-                                <el-radio v-model="radio" label="1" class="danxuan">全选</el-radio>
-                                <el-button type="primary" round class="blue">移除关联</el-button>
-                            </div>
-                        </div>
-                    </div>
+        <div class="main-content">
+            <div style="width: 1064px;margin:0 auto">
+                <div class="biaoti">
+                    <el-breadcrumb separator="·">
+                        <el-breadcrumb-item :to="{ path: '/' }">商品管理</el-breadcrumb-item>
+                        <el-breadcrumb-item>
+                            <router-link to="/goods">商品列表</router-link>
+                        </el-breadcrumb-item>
+                        <el-breadcrumb-item><span style="color: #30d366;font-weight: bolder">添加商品</span>
+                        </el-breadcrumb-item>
+                    </el-breadcrumb>
                 </div>
-                <router-link to="/GoodsAdd2">
-                    <el-button type="primary" round class="blue">上一步，填写商品信息</el-button>
-                    <el-button type="primary" round class="blue">完成，发布商品</el-button>
-                </router-link>
+                <div class="item">
+                    <ul class="top">
+                        <router-link to="/GoodsAdd1">
+                            <li class="btn1">
+                                <span class="btn">选择商品分类</span>
+                            </li>
+                        </router-link>
+                        <router-link to="/GoodsAdd2">
+                            <li class="btn2">
+                                <span class="btn">填写商品信息</span>
+                            </li>
+                        </router-link>
+                        <router-link to="/GoodsAdd3">
+                            <li class="btn3">
+                                <span class="btn">选择商品关联</span>
+                            </li>
+                        </router-link>
+                    </ul>
+                    <ul class="shuaixuan">
+                        <li>
+                            <el-select v-model="value1" placeholder="请选择分类" style="width: 120px">
+                                <el-option
+                                        v-for="item in options1"
+                                        :key="item.value1"
+                                        :label="item.label"
+                                        :value="item.value1">
+                                </el-option>
+                            </el-select>
+                        </li>
+                        <li>
+                            <el-input v-model="input" placeholder="请输入关键词搜索" style="width: 200px"></el-input>
+                        </li>
+                        <li>
+                            <div class="sousuo"></div>
+                        </li>
+                    </ul>
+                    <div class="bottom">
+                        <div class="title">
+                            <span style="font-size: 14px;color: #CECBCB">您当前选择的商品类别是：</span>
+                            <el-breadcrumb separator="/" style="display: inline-block">
+                                <el-breadcrumb-item>洗衣</el-breadcrumb-item>
+                                <el-breadcrumb-item>羽绒服清洗</el-breadcrumb-item>
+                            </el-breadcrumb>
+                        </div>
+                        <div class="select">
+                            <div>
+                                <div class="left_box">
+                                    <div class="select_box">
+                                        <div class="col-box"></div>
+                                        可选择商品
+                                    </div>
+                                    <div class="shuaixuan_bottom">
+                                        <div>
+                                            <el-radio v-model="radio" label="1" class="danxuan">羽绒服</el-radio>
+                                        </div>
+                                        <div>
+                                            <el-radio v-model="radio" label="2" class="danxuan">卫浴</el-radio>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div>
+                                    <el-radio v-model="radio" label="1" class="danxuan">全选</el-radio>
+                                    <el-button type="primary" round class="blue">确定</el-button>
+                                </div>
+                            </div>
+                            <div class="danshuang">
+                                <div>
+                                    <el-radio v-model="radio2" label="1" class="danxuan">单向关联</el-radio>
+                                </div>
+                                <div style="margin-top: 15px">
+                                    <el-radio v-model="radio2" label="2" class="danxuan">双向关联</el-radio>
+                                </div>
+                            </div>
+                            <div>
+                                <div class="left_box">
+                                    <div class="select_box">
+                                        <div class="col-box"></div>
+                                        跟该商品关联的商品
+                                    </div>
+                                    <div class="shuaixuan_bottom" v-if="radio==1">
+                                        <div>
+                                            <el-radio v-model="radios" label="1" class="danxuan">浴室柜3423</el-radio>
+                                        </div>
+                                        <div>
+                                            <el-radio v-model="radios" label="2" class="danxuan">晾衣架5624</el-radio>
+                                        </div>
+                                        <div>
+                                            <el-radio v-model="radios" label="3" class="danxuan">花洒</el-radio>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div>
+                                    <el-radio v-model="radio" label="1" class="danxuan">全选</el-radio>
+                                    <el-button type="primary" round class="blue">移除关联</el-button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <router-link to="/GoodsAdd2">
+                        <el-button type="primary" round class="blue">上一步，填写商品信息</el-button>
+                        <el-button type="primary" round class="blue">完成，发布商品</el-button>
+                    </router-link>
+                </div>
             </div>
         </div>
     </div>
@@ -229,59 +236,18 @@
 </script>
 
 <style scoped>
-    .box {
-        position: absolute;
-        left: 0;
-        right: 0;
-        top: 0;
-        bottom: 0;
-        padding-top: 50px;
-        background: white;
-    }
-
-    .content {
-        position: absolute;
-        top: 80px;
-        bottom: 0;
-        left: 18%;
-        right: 0;
-        background: white;
-    }
-
-    .aside {
-        width: 12%;
-        min-height: 800px;
-        background: #1f262c;
-        float: left;
-        position: fixed;
-        top: 0;
-        left: 0;
-    }
-
-    .aside .logo {
-        width: 100%;
-        height: 125px;
-        background: url("../../assets/img/logo.png") no-repeat center center/100% auto;
-    }
-
-    .aside-list li {
-        width: 100%;
-        height: 72px;
-        line-height: 72px;
-    }
-
-    .content .biaoti {
+    .main-content .biaoti {
         height: 52px;
         font-size: 12px;
         line-height: 52px;
     }
 
-    .content .item {
-        width: 90%;
+    .main-content .item {
+        width: 100%;
         height: 50px;
     }
 
-    .content .item .top {
+    .main-content .item .top {
         width: 100%;
         height: 39px;
         display: flex;
@@ -291,16 +257,19 @@
         line-height: 39px;
     }
 
-    .item ul li:first-child {
+    .item .top .btn1 {
         background: url("../../assets/img/add1.png") no-repeat center center/100% auto;
+    color: white;
     }
 
-    .item ul li:nth-child(2) {
+    .item .top .btn2{
         background: url("../../assets/img/add4.png") no-repeat center center/100% auto;
+        color: white;
     }
 
-    .item ul li:last-child {
+    .item .top .btn3 {
         background: url("../../assets/img/add5.png") no-repeat center center/100% auto;
+        color: white;
     }
 
     .top li {
@@ -309,13 +278,9 @@
         text-align: center;
     }
 
-    .top li .btn {
-        width: 333px;
-        height: 100%;
-        color: white;
-    }
+    
 
-    .content .item .bottom {
+    .main-content .item .bottom {
         width: 100%;
         margin-bottom: 40px;
     }
@@ -350,7 +315,7 @@
         background: url("../../assets/img/sousuo.png") no-repeat center center/100% auto;
     }
 
-    .content .blue {
+    .main-content .blue {
         height: 30px;
         background: #30B5FE;
         border: none;
@@ -379,7 +344,7 @@
         font-weight: bolder
     }
 
-    .content .col-box {
+    .main-content .col-box {
         width: 12px;
         height: 7px;
         border-radius: 5px;

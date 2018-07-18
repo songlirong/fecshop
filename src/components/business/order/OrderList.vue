@@ -31,13 +31,13 @@
                                 style="width: 100%"
                                 @row-click="handleSelectionChange"
                                 @selection-change="selsChange">
-                            <el-table-column type="selection" width="40"></el-table-column>
+                            <el-table-column type="selection"></el-table-column>
                             <el-table-column
                                     label="订单号"
-                                    width="80">
+                                    width="80" show-overflow-tooltip>
                                 <template slot-scope="scope">{{ scope.row.id }}</template>
                             </el-table-column>
-                            <el-table-column prop="name" label="商品信息" width="200">
+                            <el-table-column prop="name" label="商品信息" width="200" show-overflow-tooltip>
                                 <template slot-scope="scope">
                                     <div class="picture"></div>
                                     <div class="contents">
@@ -51,16 +51,16 @@
                                     label="单价"
                                     show-overflow-tooltip>
                             </el-table-column>
-                            <el-table-column prop="shouhuo" label="收货人" width="150">
+                            <el-table-column prop="shouhuo" label="收货人" show-overflow-tooltip>
                                 <template slot-scope="scope">
                                     <div>{{ scope.row.shouhuoname}}</div>
                                     <div>TEL:{{ scope.row.TEL}}</div>
                                     <div>{{ scope.row.Address}}</div>
                                 </template>
                             </el-table-column>
-                            <el-table-column prop="zhifu" label="支付方式" width="80" show-overflow-tooltip>
+                            <el-table-column prop="zhifu" label="支付方式"  show-overflow-tooltip>
                             </el-table-column>
-                            <el-table-column prop="jine" label="金额标签" width="160" show-overflow-tooltip>
+                            <el-table-column prop="jine" label="金额标签" show-overflow-tooltip>
                                 <template slot-scope="scope">
                                     <div>总金额:{{ scope.row.zong}}</div>
                                     <div>使用优惠券:{{ scope.row.youhui}}</div>
@@ -75,7 +75,7 @@
                             </el-table-column>
                             <el-table-column
                                     prop="data"
-                                    label="下单时间">
+                                    label="下单时间" show-overflow-tooltip>
                             </el-table-column>
                             <el-table-column prop="operation" label="操作" width="90" show-overflow-tooltip>
                                 <template slot-scope="scope">
@@ -261,7 +261,7 @@
 <style scoped>
 
     .content {
-        width: 94%;
+        width: 100%;
         height: 100%;
         box-sizing: border-box;
         padding-top: 8px;

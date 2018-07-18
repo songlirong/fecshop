@@ -277,7 +277,7 @@
 <style scoped>
 
     .content {
-        width: 90%;
+        width:100%;
         height: 100%;
         box-sizing: border-box;
         padding-top: 8px;
@@ -301,7 +301,6 @@
 
     .content .shuaixuan .xiala {
         width: 110px;
-        /*height: 28px;*/
         outline: none;
         border: none;
         font-size: 12px;
@@ -354,7 +353,6 @@
         width: 108px;
         height: 56px;
         margin-left: 10px;
-        /*background: #2aabd2;*/
         display: inline-block;
         font-size: 12px;
         line-height: 18px;

@@ -45,8 +45,7 @@
                 </div>
                 <div class="bottom1">
                     <div style="width: 328px;height: 42px;line-height: 42px;font-size: 18px;font-weight: bolder">
-                        <div class="col-box"
-                             style="width:12px;height:7px;border-radius:5px;margin-top:17px;margin-left:10px;margin-right: 7px;background-color: #37e06f;"></div>
+                        <div class="col-box"></div>
                         <span style="color:#30a3fe;">联系</span>方式
                     </div>
                     <div class="title1">
@@ -76,8 +75,7 @@
                 </div>
                 <div class="bottom2">
                     <div style="width: 328px;height: 42px;line-height: 42px;font-size: 18px;font-weight: bolder">
-                        <div class="col-box"
-                             style="width:12px;height:7px;border-radius:5px;margin-top:17px;margin-left:10px;margin-right: 7px;background-color: #37e06f;"></div>
+                        <div class="col-box"></div>
                         <span style="color:#30a3fe;">审核</span>状态
                     </div>
                     <div class="title2">
@@ -131,7 +129,7 @@
 
 <style scoped>
     .content {
-        width: 90%;
+        width:100%;
         height: 100%;
         box-sizing: border-box;
         padding-top: 8px;
@@ -148,7 +146,15 @@
         width: 100%;
         height: 50px;
     }
-
+    .content .item .col-box{
+        width:12px;
+        height:7px;
+        border-radius:5px;
+        margin-top:17px;
+        margin-left:10px;
+        margin-right: 7px;
+        background-color: #37e06f;
+    }
     .content .item .bottom {
         width: 100%;
     }
@@ -164,7 +170,6 @@
     .bottom .title {
         width: 100%;
         height: 690px;
-        /*margin-top: 10px;*/
         line-height: 46px;
         font-size: 12px;
         padding-left: 22px;
@@ -173,8 +178,7 @@
 
     .bottom1 .title1 {
         width: 100%;
-        height: 300px;
-        /*margin-top: 10px;*/
+        height: 250px;
         line-height: 46px;
         font-size: 12px;
         padding-left: 22px;
@@ -205,13 +209,14 @@
         height: 33px;
         background: #FD5E4E;
         border: none;
-        box-shadow: 0 0px 8px #FD5E4E;
+        box-shadow: 0 0 8px #FD5E4E;
     }
     .content .green {
         height: 33px;
         background: #37DF73;
         border: none;
         box-shadow: 0 0 8px #37DF73;
+        padding-top:10px;
     }
 
 </style>

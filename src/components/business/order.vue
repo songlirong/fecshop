@@ -20,7 +20,10 @@
         </div>
         <!--主内容-->
         <div class="main-content">
-            <router-view></router-view>
+            <div style="width: 1064px;margin:0 auto">
+                <router-view></router-view>
+            </div>
+
         </div>
     </div>
 </template>

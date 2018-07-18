@@ -174,7 +174,6 @@
     .content {
         width: 100%;
         height: 100%;
-        padding-left: 44px;
         box-sizing: border-box;
         padding-top: 8px;
     }
@@ -192,7 +191,6 @@
         display: flex;
         justify-content: space-between;
         line-height: 46px;
-        /*background: #9acfea;*/
     }
 
     .sousuo {
@@ -203,8 +201,7 @@
     }
 
     .content .item {
-        /*border-bottom: 1px solid #30a2fe;*/
-        width: 1040px;
+        width: 100%;
         height: 50px;
     }
 

@@ -90,13 +90,14 @@
                                 </el-form-item>
                             </el-row>
                         </el-form>
+                        <div style="float: right">
+                            <el-button type="success" round class="green">发布活动</el-button>
+                            <router-link to="/ShopActivityEdit">
+                                <el-button type="danger" round class="red">重置</el-button>
+                            </router-link>
+                        </div>
                     </div>
-                    <div style="margin-left: 620px;margin-top: 30px">
-                        <el-button type="success" round class="green">发布活动</el-button>
-                        <router-link to="/ShopActivityEdit">
-                            <el-button type="danger" round class="red">重置</el-button>
-                        </router-link>
-                    </div>
+
                 </div>
             </div>
         </div>
@@ -168,7 +169,7 @@
         display: flex;
     }
     .left_box{
-        width: 309px;
+        width: 280px;
         height: 333px;
         background: #f8fcff;
         border:2px solid #ebf6ff;
@@ -194,14 +195,16 @@
         height: 35px;
         background: #FD5E4E;
         border:none;
-        box-shadow:0 0px 8px #FD5E4E;
+        box-shadow:0 0 8px #FD5E4E;
+        padding-top: 10px;
     }
     .content .green{
         height: 35px;
         background: #37DF73;
         border:none;
-        box-shadow:0 0px 8px #37DF73;
+        box-shadow:0 0 8px #37DF73;
         margin-right: 20px;
+        padding-top: 10px;
     }
 
 </style>

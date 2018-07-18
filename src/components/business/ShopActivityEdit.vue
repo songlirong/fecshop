@@ -92,7 +92,7 @@
                             </el-row>
                         </el-form>
                     </div>
-                    <div style="margin-left: 620px;margin-top: 30px">
+                    <div style="float:right">
                         <el-button type="success" round class="green">保存</el-button>
                         <el-button type="danger" round class="red">取消</el-button>
                     </div>
@@ -145,11 +145,11 @@
     }
 
     .content {
-        width: 88%;
-        height: 100%;
-        padding-left: 200px;
-        box-sizing: border-box;
-        margin-top: 60px;
+        position: absolute;
+        top:80px;
+        bottom:0;
+        left:18%;
+        right:0;
     }
 
     .content .biaoti {
@@ -167,7 +167,7 @@
         display: flex;
     }
     .left_box{
-        width: 309px;
+        width: 280px;
         height: 333px;
         background: #f8fcff;
         border:2px solid #ebf6ff;
@@ -193,13 +193,13 @@
         height: 35px;
         background: #FD5E4E;
         border:none;
-        box-shadow:0 0px 8px #FD5E4E;
+        box-shadow:0 0 8px #FD5E4E;
     }
     .content .green{
         height: 35px;
         background: #37DF73;
         border:none;
-        box-shadow:0 0px 8px #37DF73;
+        box-shadow:0 0 8px #37DF73;
         margin-right: 20px;
     }
 

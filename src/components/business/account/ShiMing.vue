@@ -91,9 +91,8 @@
     .content {
         width: 100%;
         height: 100%;
-        padding-left: 44px;
         box-sizing: border-box;
-        padding-top: 10px;
+        padding-top: 8px;
     }
 
     .content .biaoti {
@@ -104,7 +103,7 @@
     }
 
     .content .bottom {
-        width: 900px;
+        width: 100%;
     }
 
     .bottom .title {

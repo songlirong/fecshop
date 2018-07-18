@@ -33,19 +33,19 @@
                         style="width: 100%"
                         @row-click="handleSelectionChange"
                         @selection-change="selsChange">
-                    <el-table-column type="selection" width="50"></el-table-column>
-                    <el-table-column label="活动编号" width="150">
+                    <el-table-column type="selection"></el-table-column>
+                    <el-table-column label="活动编号">
                         <template slot-scope="scope">{{ scope.row.id }}</template>
                     </el-table-column>
-                    <el-table-column prop="name" label="优惠活动名称" width="300">
+                    <el-table-column prop="name" label="优惠活动名称" width="300" show-overflow-tooltip>
                     </el-table-column>
-                    <el-table-column prop="data1" label="开始时间" width="150">
+                    <el-table-column prop="data1" label="开始时间" show-overflow-tooltip>
                     </el-table-column>
-                    <el-table-column prop="data2" label="结束时间" width="150">
+                    <el-table-column prop="data2" label="结束时间" show-overflow-tooltip>
                     </el-table-column>
-                    <el-table-column prop="type" label="折扣" width="100">
+                    <el-table-column prop="type" label="折扣" show-overflow-tooltip>
                     </el-table-column>
-                    <el-table-column prop="operation" label="操作" width="140" show-overflow-tooltip>
+                    <el-table-column prop="operation" label="操作" show-overflow-tooltip>
                         <template slot-scope="scope">
                             <el-button @click="handleClick1(scope.row)" type="text" size="small">编辑</el-button>
                             <span style="color: #eaebec">|</span>
@@ -183,7 +183,7 @@
 <style scoped>
 
     .content {
-        width: 90%;
+        width:100%;
         height: 100%;
         box-sizing: border-box;
         padding-top: 8px;
@@ -203,7 +203,6 @@
         display: flex;
         justify-content: space-between;
         line-height: 46px;
-        /*background: #9acfea;*/
     }
     .content .shuaixuan .green{
         height: 35px;
