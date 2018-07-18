@@ -364,15 +364,15 @@
         height: 33px;
         background: #FD5E4E;
         border: none;
-        box-shadow: 0 0px 8px #FD5E4E;
+        box-shadow: 0 0 8px #FD5E4E;
+        padding-top: 10px;
     }
 
     .content .green {
-        width: 112px;
         height: 33px;
         background: #37DF73;
         border: none;
-        box-shadow: 0 0px 8px #37DF73;
+        box-shadow: 0 0 8px #37DF73;
         padding-top: 10px;
     }
 
@@ -380,7 +380,8 @@
         height: 33px;
         background: #30B5FE;
         border: none;
-        box-shadow: 0 0px 8px #30B5FE;
+        box-shadow: 0 0 8px #30B5FE;
+        padding-top: 10px;
     }
 
     .content .button_left {
