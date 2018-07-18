@@ -1,30 +1,32 @@
 <template>
     <div class="box">
-            <!--侧边栏-->
-            <div class="aside">
-                <div class="logo"></div>
-                <ul class="aside-list">
-                    <li>
-                        <div class="col-box"></div>
-                        <router-link to="/order">订单列表</router-link>
-                    </li>
-                    <li>
-                        <div class="col-box"></div>
-                        <router-link to="/order/OrderIssue">纠纷列表</router-link>
-                    </li>
-                    <li>
-                        <div class="col-box"></div>
-                        <router-link to="/order/OrderTake">取件单列表</router-link>
-                    </li>
-                </ul>
-            </div>
-            <!--主内容-->
-            <div class="content">
+        <!--侧边栏-->
+        <div class="aside">
+            <div class="logo"></div>
+            <ul class="aside-list">
+                <li>
+                    <div class="col-box"></div>
+                    <router-link to="/order">订单列表</router-link>
+                </li>
+                <li>
+                    <div class="col-box"></div>
+                    <router-link to="/order/OrderIssue">纠纷列表</router-link>
+                </li>
+                <li>
+                    <div class="col-box"></div>
+                    <router-link to="/order/OrderTake">取件单列表</router-link>
+                </li>
+            </ul>
+        </div>
+        <!--主内容-->
+        <div class="main-content">
+            <div style="width: 1064px;margin:0 auto">
                 <div class="biaoti">
                     <el-breadcrumb separator="·">
                         <el-breadcrumb-item :to="{ path: '/' }">订单管理</el-breadcrumb-item>
                         <el-breadcrumb-item>取件单列表</el-breadcrumb-item>
-                        <el-breadcrumb-item><span style="color: #30d366;font-weight: bolder">查看详情</span></el-breadcrumb-item>
+                        <el-breadcrumb-item><span style="color: #30d366;font-weight: bolder">查看详情</span>
+                        </el-breadcrumb-item>
                     </el-breadcrumb>
                 </div>
                 <div class="item">
@@ -108,7 +110,8 @@
                                     </el-form-item>
                                     <el-form-item label="操作备注:">
                                         <template>
-                                            <textarea id="" cols="30" rows="10" v-model="form.desc" class="details"></textarea>
+                                            <textarea id="" cols="30" rows="10" v-model="form.desc"
+                                                      class="details"></textarea>
                                         </template>
                                     </el-form-item>
                                     <el-form-item label="当前可执行操作:">
@@ -125,9 +128,9 @@
                         </div>
                     </div>
                 </div>
+            </div>
         </div>
     </div>
-
 </template>
 
 <script>
@@ -140,7 +143,7 @@
                     data1: '2018-05-02 18:00',
                     data2: '2016-05-02 18:00',
                     data3: '2016-05-02 18:00',
-                    way:'在线支付',
+                    way: '在线支付',
                     number: '2018052916056086818',
                     name: '张三',
                     type: '代取件',
@@ -173,56 +176,25 @@
                 }
             }
         },
-        methods: {
-
-        }
+        methods: {}
     }
 </script>
 
 <style scoped>
-    .aside {
-        width: 12%;
-        min-height: 800px;
-        background: #1f262c;
-        float: left;
-        position: fixed;
-        top: 0;
-        left: 0;
-    }
 
-    .aside .logo {
-        width: 100%;
-        height: 125px;
-        background: url("../../assets/img/logo.png") no-repeat center center/100% auto;
-    }
-
-    .aside-list li {
-        width: 100%;
-        height: 72px;
-        line-height: 72px;
-    }
-
-    .content {
-        position: absolute;
-        top:80px;
-        bottom:0;
-        left:18%;
-        right:0;
-    }
-
-    .content .biaoti {
+    .main-content .biaoti {
         height: 52px;
         font-size: 12px;
         line-height: 52px;
         font-weight: bolder;
     }
 
-    .content .item {
+    .main-content .item {
         width: 90%;
         height: 50px;
     }
 
-    .content .item .bottom {
+    .main-content .item .bottom {
         width: 100%;
     }
 
@@ -238,21 +210,23 @@
 
     .bottom .title .shangpinbg {
         width: 56px;
-        height:56px;
+        height: 56px;
         background: #BBDFF6;
         border-radius: 3px;
     }
-    .title .details{
+
+    .title .details {
         width: 450px;
-        height:150px;
-        outline:none;
-        resize:none;
+        height: 150px;
+        outline: none;
+        resize: none;
         border-radius: 5px;
         background: #f3faff;
-        border:2px solid #e5eff8;
+        border: 2px solid #e5eff8;
 
     }
-    .content .blue {
+
+    .main-content .blue {
         width: 100px;
         height: 30px;
         padding-top: 7px;

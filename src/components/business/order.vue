@@ -23,7 +23,6 @@
             <div style="width: 1064px;margin:0 auto">
                 <router-view></router-view>
             </div>
-
         </div>
     </div>
 </template>

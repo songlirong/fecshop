@@ -278,7 +278,7 @@
         text-align: center;
     }
 
-    
+
 
     .main-content .item .bottom {
         width: 100%;
