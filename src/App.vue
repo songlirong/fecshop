@@ -271,4 +271,7 @@
     .el-date-editor .el-range-input{
         background: #F3FAFF;
     }
+    .el-date-editor .el-range__close-icon{
+        line-height: 20px;
+    }
 </style>

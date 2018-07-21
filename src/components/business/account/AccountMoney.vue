@@ -3,14 +3,14 @@
         <div class="content">
             <div class="biaoti">
                 <el-breadcrumb separator="·">
-                    <el-breadcrumb-item :to="{ path: '/' }">账号管理</el-breadcrumb-item>
-                    <el-breadcrumb-item><span style="color: #30d366">资金列表</span></el-breadcrumb-item>
+                    <el-breadcrumb-item :to="{ path: '/' }">账户管理</el-breadcrumb-item>
+                    <el-breadcrumb-item><span style="color: #30d366;font-weight: bolder">资金列表</span></el-breadcrumb-item>
                 </el-breadcrumb>
             </div>
             <ul class="shuaixuan">
                 <li>
-                    <el-select v-model="value" filterable placeholder="最近一个月"
-                               style="width: 120px;display: inline-block">
+                    <el-select v-model="value" filterable placeholder="最近一月"
+                               style="display: inline-block">
                         <el-option
                                 v-for="item in options"
                                 :key="item.value"
@@ -25,7 +25,7 @@
                     </el-date-picker>
                 </li>
                 <li>
-                    <el-input v-model="input" placeholder="请输入关键字搜索" style="width: 200px"></el-input>
+                    <el-input v-model="input" placeholder="请输入关键字搜索"></el-input>
                 </li>
                 <li>
                     <div class="sousuo"></div>
@@ -40,15 +40,15 @@
                         @row-click="handleSelectionChange"
                         @selection-change="selsChange">
                     <el-table-column type="selection" width="50"></el-table-column>
-                    <el-table-column prop="data" label="账户变动时间">
+                    <el-table-column prop="data" label="账户变动时间" show-overflow-tooltip>
                     </el-table-column>
-                    <el-table-column prop="xiangqing" label="操作详情">
+                    <el-table-column prop="xiangqing" label="操作详情" show-overflow-tooltip>
                     </el-table-column>
-                    <el-table-column prop="type" label="类型">
+                    <el-table-column prop="type" label="类型" show-overflow-tooltip>
                     </el-table-column>
-                    <el-table-column prop="money1" label="金额">
+                    <el-table-column prop="money1" label="金额" show-overflow-tooltip>
                     </el-table-column>
-                    <el-table-column prop="money2" label="账户可用余额">
+                    <el-table-column prop="money2" label="账户可用余额" show-overflow-tooltip>
                     </el-table-column>
                     <el-table-column label="操作">
                         <template slot-scope="scope">
@@ -56,19 +56,32 @@
                         </template>
                     </el-table-column>
                 </el-table>
-                <div style="float: right;margin-top:20px"><span>总计206记录</span><span
-                        style="margin-left: 20px">分82页</span></div>
-                <div style="margin-top: 20px">
-                    <el-button @click="toggleSelection(tableData)">全选</el-button>
-                    <el-button type="success" round>导出</el-button>
-                    <el-button type="primary" round>打印</el-button>
+                <div style="position: relative;">
+                    <div style="width:180px;position:absolute;right:0;bottom: 50px;display: flex;justify-content: space-between">
+                        <div style="display: flex">
+                            <div class="dian"></div>
+                            总计<span style="color:#3db0ff;font-weight: bolder">206</span>记录
+                        </div>
+                        <div style="display: flex">
+                            <div class="dian" style="background: #29c99a"></div>
+                            分<span style="font-weight:bolder;color:#29c99a;">82</span>页
+                        </div>
+                    </div>
+                    <div style="margin-top: 40px">
+                        <el-button @click="toggleSelection(tableData)">全选</el-button>
+                        <el-button type="success" round class="green">导出</el-button>
+                        <el-button type="success" round class="blue">打印</el-button>
+                    </div>
                 </div>
-                <div style="float: right;margin-top: 50px">
-                    <el-pagination
-                            background
-                            layout="prev, pager, next"
-                            :total="100">
-                    </el-pagination>
+                <div style="width: 100%;position: relative">
+                    <div style="font-size:12px;position: absolute;bottom:0;right:0;display: flex;justify-content: space-between">
+                        <div class="button_left">首页</div>
+                        <el-pagination
+                                layout="prev, pager, next"
+                                :total="50">
+                        </el-pagination>
+                        <div class="button_right">末页</div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -107,7 +120,7 @@
                         }
                     }]
                 },
-                value1: [new Date(2000, 10, 10, 10, 10), new Date(2000, 10, 11, 10, 10)],
+                value1: [new Date(2000, 10, 10, 22, 22,11), new Date(2000, 10, 11, 10, 10)],
                 sels: [],
                 input: '',
                 options: [{
@@ -147,7 +160,6 @@
                 multipleSelection: []
             }
         },
-
         methods: {
             toggleSelection(rows) {
                 this.$refs.multipleTable.clearSelection();
@@ -165,12 +177,10 @@
                 console.log(tab, event);
             },
         }
-
     }
 </script>
 
 <style scoped>
-
     .content {
         width: 100%;
         height: 100%;
@@ -187,7 +197,7 @@
 
     .content .shuaixuan {
         height: 46px;
-        width: 900px;
+        width:100%;
         display: flex;
         justify-content: space-between;
         line-height: 46px;
@@ -203,6 +213,21 @@
     .content .item {
         width: 100%;
         height: 50px;
+    }
+    .content .green {
+        height: 33px;
+        background: #37DF73;
+        border: none;
+        box-shadow: 0 0 8px #37DF73;
+        padding-top: 10px;
+    }
+
+    .content .blue {
+        height: 33px;
+        background: #30B5FE;
+        border: none;
+        box-shadow: 0 0 8px #30B5FE;
+        padding-top: 10px;
     }
 
 

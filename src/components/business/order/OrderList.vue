@@ -317,7 +317,7 @@
         height: 35px;
         background: #FD5E4E;
         border:none;
-        box-shadow:0 0px 8px #FD5E4E;
+        box-shadow:0 0 8px #FD5E4E;
     }
 
 

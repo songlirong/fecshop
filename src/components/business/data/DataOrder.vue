@@ -4,12 +4,12 @@
             <div class="biaoti">
                 <el-breadcrumb separator="·">
                     <el-breadcrumb-item :to="{ path: '/' }">数据统计</el-breadcrumb-item>
-                    <el-breadcrumb-item><span style="color: #30d366">订单统计</span></el-breadcrumb-item>
+                    <el-breadcrumb-item><span style="color: #30d366;font-weight: bolder">订单统计</span></el-breadcrumb-item>
                 </el-breadcrumb>
             </div>
             <ul class="shuaixuan">
                 <li>
-                    <el-select v-model="value" placeholder="最近一周" style="width: 150px">
+                    <el-select v-model="value" placeholder="最近一周">
                         <el-option
                                 v-for="item in options"
                                 :key="item.value"
@@ -24,7 +24,7 @@
                     </el-date-picker>
                 </li>
                 <li>
-                    <el-button type="primary" round>查询</el-button>
+                    <el-button type="primary" round class="blue">查询</el-button>
                 </li>
             </ul>
             <ul class="item">
@@ -86,17 +86,16 @@
                                     </el-date-picker>
                                 </li>
                                 <li style="margin-top:5px">
-                                    <el-button type="primary" round
-                                               style="width: 50px;height: 30px;line-height: 5px;font-size: 12px;padding-left:12px">
+                                    <el-button type="primary" round class="blue">
                                         确定
                                     </el-button>
                                 </li>
                             </ul>
                             <div class="tu1"></div>
-                            <div>
-                                <el-button type="primary" round>导出图片</el-button>
-                                <el-button type="success" round>导出表格</el-button>
-                                <el-button type="warning" round>导出报告</el-button>
+                            <div style="display: flex;justify-content: center">
+                                <el-button type="primary" round class="blue">导出图片</el-button>
+                                <el-button type="success" round class="green">导出表格</el-button>
+                                <el-button type="warning" round class="yellow">导出报告</el-button>
                             </div>
                         </div>
                         <div :class="['contents',{active:now==1}]">一个月</div>
@@ -124,17 +123,16 @@
                                     </el-date-picker>
                                 </li>
                                 <li style="margin-top:5px">
-                                    <el-button type="primary" round
-                                               style="width: 50px;height: 30px;line-height: 5px;font-size: 12px;padding-left:12px">
+                                    <el-button type="primary" round class="blue">
                                         确定
                                     </el-button>
                                 </li>
                             </ul>
                             <div class="tu2"></div>
-                            <div>
-                                <el-button type="primary" round>导出图片</el-button>
-                                <el-button type="success" round>导出表格</el-button>
-                                <el-button type="warning" round>导出报告</el-button>
+                            <div style="display: flex;justify-content: center">
+                                <el-button type="primary" round class="blue">导出图片</el-button>
+                                <el-button type="success" round class="green">导出表格</el-button>
+                                <el-button type="warning" round class="yellow">导出报告</el-button>
                             </div>
                         </div>
                         <div :class="['contents',{active:next==1}]">一个月</div>
@@ -152,16 +150,15 @@
                         <div :class="['btn',{active:next1==2}]" @click="next1=2">一个季度</div>
                         <div :class="['btn',{active:next1==3}]" @click="next1=3">一年</div>
                     </div>
-                    <ul style="display: flex;">
+                    <ul style="width:490px;display: flex;justify-content: space-between">
                         <li>
                             <el-date-picker v-model="value1" type="datetimerange" range-separator="至"
                                             start-placeholder="开始日期"
-                                            end-placeholder="结束日期" style="width: 380px">
+                                            end-placeholder="结束日期">
                             </el-date-picker>
                         </li>
                         <li>
-                            <el-button type="primary" round
-                                       style="width: 50px;height: 30px;line-height: 5px;font-size: 12px;padding-left:12px">
+                            <el-button type="primary" round class="blue">
                                 确定
                             </el-button>
                         </li>
@@ -262,7 +259,7 @@
         line-height: 46px;
     }
     .content .item {
-        width: 1000px;
+        width: 100%;
         margin-top: 28px;
         display: flex;
         justify-content: space-between;
@@ -290,7 +287,7 @@
         font-weight: bolder;
     }
     .content .item1 {
-        width: 1014px;
+        width:100%;
         margin-top: 28px;
         display: flex;
         justify-content: space-between;
@@ -356,7 +353,7 @@
         display: block;
     }
     .content .item2 {
-        width: 1014px;
+        width: 100%;
         margin-top: 28px;
     }
     .content .item2 .title2{
@@ -389,5 +386,27 @@
         width: 100%;
         height: 500px;
         background: url("../../../assets/img/zhexiantu.png") no-repeat center center /100% auto;
+    }
+    .content .blue {
+        height: 33px;
+        background: #30B5FE;
+        border: none;
+        box-shadow: 0 0 8px #30B5FE;
+        padding-top: 10px;
+    }
+    .content .yellow {
+        height: 33px;
+        background: #FAC83A;
+        border: none;
+        box-shadow: 0 0 8px #FAC83A;
+        padding-top: 10px;
+    }
+
+    .content .green {
+        height: 33px;
+        background: #37DF73;
+        border: none;
+        box-shadow: 0 0 8px #37DF73;
+        padding-top: 10px;
     }
 </style>

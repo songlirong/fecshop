@@ -4,12 +4,12 @@
             <div class="biaoti">
                 <el-breadcrumb separator="·">
                     <el-breadcrumb-item :to="{ path: '/' }">数据统计</el-breadcrumb-item>
-                    <el-breadcrumb-item><span style="color: #30d366">销售统计</span></el-breadcrumb-item>
+                    <el-breadcrumb-item><span style="color: #30d366;font-weight: bolder">销售统计</span></el-breadcrumb-item>
                 </el-breadcrumb>
             </div>
             <ul class="shuaixuan">
                 <li>
-                    <el-select v-model="value" placeholder="最近一周" style="width: 150px">
+                    <el-select v-model="value" placeholder="最近一周">
                         <el-option
                                 v-for="item in options"
                                 :key="item.value"
@@ -24,7 +24,7 @@
                     </el-date-picker>
                 </li>
                 <li>
-                    <el-button type="primary" round>查询</el-button>
+                    <el-button type="primary" round class="blue">查询</el-button>
                 </li>
             </ul>
             <ul class="item">
@@ -58,8 +58,7 @@
                             </el-date-picker>
                         </li>
                         <li>
-                            <el-button type="primary" round
-                                       style="width: 50px;height: 30px;line-height: 5px;font-size: 12px;padding-left:12px">
+                            <el-button type="primary" round class="blue">
                                 确定
                             </el-button>
                         </li>
@@ -154,13 +153,14 @@
 
     .content .shuaixuan {
         height: 46px;
-        width: 780px;
+        width: 800px;
         display: flex;
         justify-content: space-between;
         line-height: 46px;
     }
 
     .content .item {
+        margin-top: 20px;
         height: 85px;
         width: 573px;
         display: flex;
@@ -224,12 +224,16 @@
         color: #30A6FE;
 
     }
-
-    .content .item1 .btn {
+    .item1 .title_right {
+        width: 250px;
+        color: #30A6FE;
+        display: flex;
+        justify-content: space-between;
+    }
+    .title1 .title_right .btn {
         float: left;
         line-height: 40px;
     }
-
     .content .item1 .bottom {
         width: 100%;
         padding-top: 10px;
@@ -250,5 +254,12 @@
         width: 100%;
         height: 500px;
         background: url("../../../assets/img/zhexiantu.png") no-repeat center center /100% auto;
+    }
+    .content .blue {
+        height: 33px;
+        background: #30B5FE;
+        border: none;
+        box-shadow: 0 0 8px #30B5FE;
+        padding-top: 10px;
     }
 </style>

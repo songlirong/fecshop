@@ -205,7 +205,6 @@
         font-size: 12px;
         padding-left: 22px;
         padding-bottom: 20px;
-
     }
 
     .bottom .title .shangpinbg {
@@ -223,7 +222,6 @@
         border-radius: 5px;
         background: #f3faff;
         border: 2px solid #e5eff8;
-
     }
 
     .main-content .blue {

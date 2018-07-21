@@ -254,8 +254,6 @@
         text-align: center;
     }
 
-
-
     .main-content .item .bottom {
         width: 100%;
         margin-bottom: 20px;

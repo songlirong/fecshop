@@ -3,14 +3,13 @@
         <div class="content">
             <div class="biaoti">
                 <el-breadcrumb separator="·">
-                    <el-breadcrumb-item :to="{ path: '/' }">账号管理</el-breadcrumb-item>
-                    <el-breadcrumb-item><span style="color: #30d366">账单列表</span></el-breadcrumb-item>
+                    <el-breadcrumb-item :to="{ path: '/' }">账户管理</el-breadcrumb-item>
+                    <el-breadcrumb-item><span style="color: #30d366;font-weight: bolder">账单列表</span></el-breadcrumb-item>
                 </el-breadcrumb>
             </div>
             <ul class="shuaixuan">
                 <li>
-                    <el-select v-model="value" filterable placeholder="今日账单"
-                               style="width: 120px;display: inline-block">
+                    <el-select v-model="value" filterable style="width: 120px;display: inline-block">
                         <el-option
                                 v-for="item in options"
                                 :key="item.value"
@@ -66,19 +65,32 @@
                     <el-table-column prop="type" label="支付方式">
                     </el-table-column>
                 </el-table>
-                <div style="float: right;margin-top:20px"><span>总计206记录</span><span
-                        style="margin-left: 20px">分82页</span></div>
-                <div style="margin-top: 20px">
-                    <el-button @click="toggleSelection(tableData)">全选</el-button>
-                    <el-button type="success" round>导出</el-button>
-                    <el-button type="primary" round>打印</el-button>
+                <div style="position: relative;">
+                    <div style="width:180px;position:absolute;right:0;bottom: 50px;display: flex;justify-content: space-between">
+                        <div style="display: flex">
+                            <div class="dian"></div>
+                            总计<span style="color:#3db0ff;font-weight: bolder">206</span>记录
+                        </div>
+                        <div style="display: flex">
+                            <div class="dian" style="background: #29c99a"></div>
+                            分<span style="font-weight:bolder;color:#29c99a;">82</span>页
+                        </div>
+                    </div>
+                    <div style="margin-top: 40px">
+                        <el-button @click="toggleSelection(tableData)">全选</el-button>
+                        <el-button type="success" round class="green">导出</el-button>
+                        <el-button type="success" round class="blue">打印</el-button>
+                    </div>
                 </div>
-                <div style="float: right;margin-top: 50px">
-                    <el-pagination
-                            background
-                            layout="prev, pager, next"
-                            :total="100">
-                    </el-pagination>
+                <div style="width: 100%;position: relative">
+                    <div style="font-size:12px;position: absolute;bottom:0;right:0;display: flex;justify-content: space-between">
+                        <div class="button_left">首页</div>
+                        <el-pagination
+                                layout="prev, pager, next"
+                                :total="50">
+                        </el-pagination>
+                        <div class="button_right">末页</div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -122,15 +134,12 @@
                 input: '',
                 options: [{
                     value: '选项1',
-                    label: '1'
+                    label: '今日账单'
                 }, {
                     value: '选项2',
                     label: '2'
-                }, {
-                    value: '选项3',
-                    label: '3'
                 }],
-                value: '',
+                value: '今日账单',
                 tableData: [{
                     id: '5033',
                     money1: '672.00',
@@ -243,7 +252,7 @@
 
     .content .shuaixuan {
         height: 46px;
-        width: 900px;
+        width: 100%;
         display: flex;
         justify-content: space-between;
         line-height: 46px;
@@ -270,6 +279,21 @@
         color: #30a2fe;
         line-height: 50px;
 
+    }
+    .content .green {
+        height: 33px;
+        background: #37DF73;
+        border: none;
+        box-shadow: 0 0 8px #37DF73;
+        padding-top: 10px;
+    }
+
+    .content .blue {
+        height: 33px;
+        background: #30B5FE;
+        border: none;
+        box-shadow: 0 0 8px #30B5FE;
+        padding-top: 10px;
     }
 
 

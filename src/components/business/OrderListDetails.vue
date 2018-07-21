@@ -284,7 +284,7 @@
         padding-left: 17px;
         background: #30B5FE;
         border: none;
-        box-shadow: 0 0px 8px #30B5FE;
+        box-shadow: 0 0 8px #30B5FE;
     }
 
     .bottom .bottom_top {

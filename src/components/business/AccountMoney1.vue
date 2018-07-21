@@ -1,43 +1,43 @@
 <template>
     <div>
-        <div style="width: 100%;min-height: 600px;">
-            <!--侧边栏-->
-            <div class="aside">
-                <div class="logo"></div>
-                <ul class="aside-list">
-                    <li>
-                        <div class="col-box"></div>
-                        <router-link to="/account">实名认证</router-link>
-                    </li>
-                    <li>
-                        <div class="col-box"></div>
-                        <router-link to="/account/AccountBill">账单列表</router-link>
-                    </li>
-                    <li>
-                        <div class="col-box"></div>
-                        <router-link to="/account/AccountMoney">资金列表</router-link>
-                    </li>
-                    <li>
-                        <div class="col-box"></div>
-                        <router-link to="/account/AccountThawing">账户解冻</router-link>
-                    </li>
-                </ul>
-            </div>
-            <!--主内容-->
-            <div class="content">
+        <!--侧边栏-->
+        <div class="aside">
+            <div class="logo"></div>
+            <ul class="aside-list">
+                <li>
+                    <div class="col-box"></div>
+                    <router-link to="/account">实名认证</router-link>
+                </li>
+                <li>
+                    <div class="col-box"></div>
+                    <router-link to="/account/AccountBill">账单列表</router-link>
+                </li>
+                <li>
+                    <div class="col-box"></div>
+                    <router-link to="/account/AccountMoney">资金列表</router-link>
+                </li>
+                <li>
+                    <div class="col-box"></div>
+                    <router-link to="/account/AccountThawing">账户解冻</router-link>
+                </li>
+            </ul>
+        </div>
+        <!--主内容-->
+        <div class="main-content">
+            <div style="width: 1064px;margin:0 auto">
                 <div class="biaoti">
                     <el-breadcrumb separator="·">
                         <el-breadcrumb-item :to="{ path: '/' }">账户管理</el-breadcrumb-item>
                         <el-breadcrumb-item>
                             <router-link to="/goods">资金列表</router-link>
                         </el-breadcrumb-item>
-                        <el-breadcrumb-item><span style="color: #30d366">查看详情</span></el-breadcrumb-item>
+                        <el-breadcrumb-item><span style="color: #30d366;font-weight: bolder">查看详情</span></el-breadcrumb-item>
                     </el-breadcrumb>
                 </div>
                 <ul class="shuaixuan">
                     <li>
-                        <el-select v-model="value" filterable placeholder="最近一个月"
-                                   style="width: 120px;display: inline-block">
+                        <el-select v-model="value" filterable placeholder="最近一月"
+                                   style="display: inline-block">
                             <el-option
                                     v-for="item in options"
                                     :key="item.value"
@@ -52,7 +52,7 @@
                         </el-date-picker>
                     </li>
                     <li>
-                        <el-input v-model="input" placeholder="请输入关键字搜索" style="width: 200px"></el-input>
+                        <el-input v-model="input" placeholder="请输入关键字搜索"></el-input>
                     </li>
                     <li>
                         <div class="sousuo"></div>
@@ -67,21 +67,20 @@
                                 style="width: 100%"
                                 @row-click="handleSelectionChange"
                                 @selection-change="selsChange">
-                            <el-table-column type="selection" width="50"></el-table-column>
-                            <el-table-column prop="data" label="交易日期">
+                            <el-table-column prop="data" label="交易日期" show-overflow-tooltip>
                             </el-table-column>
-                            <el-table-column prop="time" label="入账时间">
+                            <el-table-column prop="time" label="入账时间" show-overflow-tooltip>
                             </el-table-column>
-                            <el-table-column prop="number" label="订单号">
+                            <el-table-column prop="number" label="订单号" show-overflow-tooltip>
                             </el-table-column>
-                            <el-table-column prop="type" label="支付方式">
+                            <el-table-column prop="type" label="支付方式" show-overflow-tooltip>
                             </el-table-column>
-                            <el-table-column prop="money1" label="总余额">
+                            <el-table-column prop="money1" label="总余额" show-overflow-tooltip>
                             </el-table-column>
-                            <el-table-column prop="money2" label="商家所得">
+                            <el-table-column prop="money2" label="商家所得" show-overflow-tooltip>
                             </el-table-column>
                         </el-table>
-                        <ul style="width:800px;display: flex;justify-content: space-between;line-height: 50px">
+                        <ul style="width:90%;display: flex;justify-content: space-between;line-height: 50px">
                             <li><span class="name">5月订单总量：</span>4笔</li>
                             <li><span class="name">总金额：</span>20,220</li>
                             <li><span class="name">应发金额：</span>19,243</li>
@@ -89,20 +88,32 @@
                             <li><span class="name">实发金额：</span>17,117</li>
                         </ul>
                     </div>
-
-                    <div style="float: right;margin-top:20px"><span>总计206记录</span><span
-                            style="margin-left: 20px">分82页</span></div>
-                    <div style="margin-top: 20px">
-                        <el-button @click="toggleSelection(tableData)">全选</el-button>
-                        <el-button type="success" round>导出</el-button>
-                        <el-button type="primary" round>打印</el-button>
+                    <div style="position: relative;">
+                        <div style="width:180px;position:absolute;right:0;bottom: 50px;display: flex;justify-content: space-between">
+                            <div style="display: flex">
+                                <div class="dian"></div>
+                                总计<span style="color:#3db0ff;font-weight: bolder">206</span>记录
+                            </div>
+                            <div style="display: flex">
+                                <div class="dian" style="background: #29c99a"></div>
+                                分<span style="font-weight:bolder;color:#29c99a;">82</span>页
+                            </div>
+                        </div>
+                        <div style="margin-top: 40px">
+                            <el-button @click="toggleSelection(tableData)">全选</el-button>
+                            <el-button type="success" round class="green">导出</el-button>
+                            <el-button type="success" round class="blue">打印</el-button>
+                        </div>
                     </div>
-                    <div style="float: right;margin-top: 50px">
-                        <el-pagination
-                                background
-                                layout="prev, pager, next"
-                                :total="100">
-                        </el-pagination>
+                    <div style="width: 100%;position: relative">
+                        <div style="font-size:12px;position: absolute;bottom:0;right:0;display: flex;justify-content: space-between">
+                            <div class="button_left">首页</div>
+                            <el-pagination
+                                    layout="prev, pager, next"
+                                    :total="50">
+                            </el-pagination>
+                            <div class="button_right">末页</div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -157,24 +168,24 @@
                 }],
                 value: '',
                 tableData: [{
-                    data:'2018-5-29 18:25:00',
-                    time:'2018-5-29 18:25:00',
-                    number:'DSV0002',
-                    type:'微信支付',
+                    data: '2018-5-29 18:25:00',
+                    time: '2018-5-29 18:25:00',
+                    number: 'DSV0002',
+                    type: '微信支付',
                     money1: '111,098',
                     money2: '6,478',
                 }, {
-                    data:'2018-5-29 18:25:00',
-                    time:'2018-5-29 18:25:00',
-                    number:'DSV0002',
-                    type:'微信支付',
+                    data: '2018-5-29 18:25:00',
+                    time: '2018-5-29 18:25:00',
+                    number: 'DSV0002',
+                    type: '微信支付',
                     money1: '111,098',
                     money2: '6,478',
                 }, {
-                    data:'2018-5-29 18:25:00',
-                    time:'2018-5-29 18:25:00',
-                    number:'DSV0002',
-                    type:'微信支付',
+                    data: '2018-5-29 18:25:00',
+                    time: '2018-5-29 18:25:00',
+                    number: 'DSV0002',
+                    type: '微信支付',
                     money1: '111,098',
                     money2: '6,478',
                 }],
@@ -203,49 +214,19 @@
 </script>
 
 <style scoped>
-    .aside {
-        width: 12%;
-        min-height: 800px;
-        background: #1f262c;
-        float: left;
-        position: fixed;
-        top: 0;
-        left: 0;
-    }
-
-    .aside .logo {
-        width: 100%;
-        height: 125px;
-        background: url("../../assets/img/logo.png") no-repeat center center/100% auto;
-    }
-
-    .aside-list li {
-        width: 100%;
-        height: 72px;
-        line-height: 72px;
-    }
-
-    .content {
-        width: 88%;
-        height: 100%;
-        padding-left: 200px;
-        box-sizing: border-box;
-        margin-top: 60px;
-    }
-
-    .content .biaoti {
+    .main-content .biaoti {
         height: 52px;
         font-size: 12px;
         line-height: 52px;
         font-weight: bolder;
     }
-    .content .shuaixuan {
+
+    .main-content .shuaixuan {
         height: 46px;
-        width: 900px;
+        width:100%;
         display: flex;
         justify-content: space-between;
         line-height: 46px;
-        /*background: #9acfea;*/
     }
 
     .sousuo {
@@ -255,11 +236,27 @@
         background: url("../../assets/img/sousuo.png") no-repeat center center/100% auto;
     }
 
-    .content .item {
-        width: 1040px;
+    .main-content .item {
+        width:100%;
         height: 50px;
     }
-    .content .item .name{
+
+    .main-content .item .name {
         color: #8c8c8c;
+    }
+    .main-content .green {
+        height: 33px;
+        background: #37DF73;
+        border: none;
+        box-shadow: 0 0 8px #37DF73;
+        padding-top: 10px;
+    }
+
+    .main-content .blue {
+        height: 33px;
+        background: #30B5FE;
+        border: none;
+        box-shadow: 0 0 8px #30B5FE;
+        padding-top: 10px;
     }
 </style>

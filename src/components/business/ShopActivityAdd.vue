@@ -1,39 +1,40 @@
 <template>
     <div>
-        <div style="width: 100%;min-height: 600px;">
-            <!--侧边栏-->
-            <div class="aside">
-                <div class="logo"></div>
-                <ul class="aside-list">
-                    <li>
-                        <div class="col-box"></div>
-                        <router-link to="/shop">店铺信息</router-link>
-                    </li>
-                    <li>
-                        <div class="col-box"></div>
-                        <router-link to="/shop/ShopPicture">店铺图片设置</router-link>
-                    </li>
-                    <li>
-                        <div class="col-box"></div>
-                        <router-link to="/shop/ShopActivity">店铺活动</router-link>
-                    </li>
-                    <li>
-                        <div class="col-box"></div>
-                        <router-link to="/shop/ShopCoupon">优惠券管理</router-link>
-                    </li>
-                    <li>
-                        <div class="col-box"></div>
-                        <router-link to="/shop/ShopConsult">咨询管理</router-link>
-                    </li>
-                </ul>
-            </div>
-            <!--主内容-->
-            <div class="content">
+        <!--侧边栏-->
+        <div class="aside">
+            <div class="logo"></div>
+            <ul class="aside-list">
+                <li>
+                    <div class="col-box"></div>
+                    <router-link to="/shop">店铺信息</router-link>
+                </li>
+                <li>
+                    <div class="col-box"></div>
+                    <router-link to="/shop/ShopPicture">店铺图片设置</router-link>
+                </li>
+                <li>
+                    <div class="col-box"></div>
+                    <router-link to="/shop/ShopActivity">店铺活动</router-link>
+                </li>
+                <li>
+                    <div class="col-box"></div>
+                    <router-link to="/shop/ShopCoupon">优惠券管理</router-link>
+                </li>
+                <li>
+                    <div class="col-box"></div>
+                    <router-link to="/shop/ShopConsult">咨询管理</router-link>
+                </li>
+            </ul>
+        </div>
+        <!--主内容-->
+        <div class="main-content">
+            <div style="width: 1064px;margin:0 auto">
                 <div class="biaoti">
                     <el-breadcrumb separator="·">
                         <el-breadcrumb-item :to="{ path: '/' }">店铺管理</el-breadcrumb-item>
                         <el-breadcrumb-item>店铺活动</el-breadcrumb-item>
-                        <el-breadcrumb-item><span style="color: #30d366;font-weight: bolder">添加店铺活动</span></el-breadcrumb-item>
+                        <el-breadcrumb-item><span style="color: #30d366;font-weight: bolder">添加店铺活动</span>
+                        </el-breadcrumb-item>
                     </el-breadcrumb>
                 </div>
                 <div class="bottom">
@@ -64,26 +65,49 @@
                                                 <div>
                                                     <el-radio v-model="radio" label="1" class="danxuan">水</el-radio>
                                                 </div>
-                                               <div>
-                                                   <el-radio v-model="radio" label="2" class="danxuan">卫浴</el-radio>
-                                               </div>
+                                                <div>
+                                                    <el-radio v-model="radio" label="2" class="danxuan">卫浴</el-radio>
+                                                </div>
                                             </div>
                                         </div>
                                         <div class="jiantou"></div>
                                         <div class="left_box">
                                             <div class="shuaixuan_top">请选择商品</div>
                                             <div class="shuaixuan_bottom" v-if="radio==1">
-                                                <div><el-radio v-model="radios" label="1" class="danxuan">浴室柜3423</el-radio></div>
-                                                <div><el-radio v-model="radios" label="2" class="danxuan">晾衣架5624</el-radio></div>
-                                                <div><el-radio v-model="radios" label="3" class="danxuan">花洒</el-radio></div>
-                                                <div><el-radio v-model="radios" label="4" class="danxuan">坐便器</el-radio></div>
-                                                <div><el-radio v-model="radios" label="5" class="danxuan">洁具陶瓷盆</el-radio></div>
-                                                <div><el-radio v-model="radios" label="6" class="danxuan">其他</el-radio></div>
+                                                <div>
+                                                    <el-radio v-model="radios" label="1" class="danxuan">浴室柜3423
+                                                    </el-radio>
+                                                </div>
+                                                <div>
+                                                    <el-radio v-model="radios" label="2" class="danxuan">晾衣架5624
+                                                    </el-radio>
+                                                </div>
+                                                <div>
+                                                    <el-radio v-model="radios" label="3" class="danxuan">花洒</el-radio>
+                                                </div>
+                                                <div>
+                                                    <el-radio v-model="radios" label="4" class="danxuan">坐便器</el-radio>
+                                                </div>
+                                                <div>
+                                                    <el-radio v-model="radios" label="5" class="danxuan">洁具陶瓷盆
+                                                    </el-radio>
+                                                </div>
+                                                <div>
+                                                    <el-radio v-model="radios" label="6" class="danxuan">其他</el-radio>
+                                                </div>
                                             </div>
                                             <div v-if="radio==2">
-                                                <div><el-radio v-model="radios" label="1" class="danxuan">浴室柜3423</el-radio></div>
-                                                <div><el-radio v-model="radios" label="2" class="danxuan">晾衣架5624</el-radio></div>
-                                                <div><el-radio v-model="radios" label="3" class="danxuan">花洒</el-radio></div>
+                                                <div>
+                                                    <el-radio v-model="radios" label="1" class="danxuan">浴室柜3423
+                                                    </el-radio>
+                                                </div>
+                                                <div>
+                                                    <el-radio v-model="radios" label="2" class="danxuan">晾衣架5624
+                                                    </el-radio>
+                                                </div>
+                                                <div>
+                                                    <el-radio v-model="radios" label="3" class="danxuan">花洒</el-radio>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
@@ -102,6 +126,7 @@
             </div>
         </div>
     </div>
+
 </template>
 
 <script>
@@ -109,14 +134,14 @@
         name: "ShopActivityAdd",
         data() {
             return {
-                form:{
-                    name:'',
-                    data:'',
-                    zhekou:'',
-                    bankNumber:''
+                form: {
+                    name: '',
+                    data: '',
+                    zhekou: '',
+                    bankNumber: ''
                 },
-                radio:'1',
-                radios:'',
+                radio: '1',
+                radios: '',
             }
         },
         methods: {}
@@ -124,85 +149,63 @@
 </script>
 
 <style scoped>
-    .aside {
-        width: 12%;
-        min-height: 800px;
-        background: #1f262c;
-        float: left;
-        position: fixed;
-        top: 0;
-        left: 0;
-    }
 
-    .aside .logo {
-        width: 100%;
-        height: 125px;
-        background: url("../../assets/img/logo.png") no-repeat center center/100% auto;
-    }
-
-    .aside-list li {
-        width: 100%;
-        height: 72px;
-        line-height: 72px;
-    }
-
-    .content {
-        position: absolute;
-        top:80px;
-        bottom:0;
-        left:18%;
-        right:0;
-    }
-
-    .content .biaoti {
+    .main-content .biaoti {
         height: 52px;
         font-size: 12px;
         line-height: 52px;
         font-weight: bolder;
     }
 
-    .content .bottom {
+    .main-content .bottom {
         width: 100%;
     }
-    .title .shuaixuan{
+
+    .title .shuaixuan {
         margin-top: 15px;
         display: flex;
     }
-    .left_box{
+
+    .left_box {
         width: 280px;
         height: 333px;
         background: #f8fcff;
-        border:2px solid #ebf6ff;
+        border: 2px solid #ebf6ff;
         padding-left: 17px;
     }
-    .title .shuaixuan .shuaixuan_top{
+
+    .title .shuaixuan .shuaixuan_top {
         line-height: 55px;
         font-size: 14px;
         color: #9bd2fd;
     }
-    .bottom .jiantou{
+
+    .bottom .jiantou {
         width: 42px;
         height: 14px;
         margin-top: 33px;
         background: url("../../assets/img/jiantou.png");
     }
-    .shuaixuan_bottom .danxuan{
+
+    .shuaixuan_bottom .danxuan {
         width: 20px;
         height: 20px;
         font-size: 12px;
     }
-    .content .red{
+
+    .main-content .red {
         height: 35px;
         background: #FD5E4E;
-        border:none;
-        box-shadow:0 0 8px #FD5E4E;
+        border: none;
+        box-shadow: 0 0 8px #FD5E4E;
         padding-top: 10px;
     }
-    .content .green{
+
+    .main-content .green {
         height: 35px;
         background: #37DF73;
-        border:none;
-        box-shadow:0 0 8px #37DF73;
+        border: none;
+        box-shadow: 0 0 8px #37DF73;
         margin-right: 20px;
         padding-top: 10px;
     }

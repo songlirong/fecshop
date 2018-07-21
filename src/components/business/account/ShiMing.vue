@@ -3,8 +3,8 @@
         <div class="content">
             <div class="biaoti">
                 <el-breadcrumb separator="·">
-                    <el-breadcrumb-item :to="{ path: '/' }">店铺管理</el-breadcrumb-item>
-                    <el-breadcrumb-item><span style="color: #30d366">实名认证</span></el-breadcrumb-item>
+                    <el-breadcrumb-item :to="{ path: '/' }">账户管理</el-breadcrumb-item>
+                    <el-breadcrumb-item><span style="color: #30d366;font-weight: bolder">实名认证</span></el-breadcrumb-item>
                 </el-breadcrumb>
             </div>
             <div class="bottom">
@@ -30,7 +30,7 @@
                                               placeholder="http:test1.ecmoban.com/seller_imgs/seller_logo/seller_logo1.jpg"
                                               style="width:500px">
                                     </el-input>
-                                    <el-button type="primary" round @click="">上传</el-button>
+                                    <el-button type="primary" round class="blue">上传</el-button>
                                 </div>
                             </el-form-item>
                             <el-form-item label="*身份证背面图片">
@@ -39,7 +39,7 @@
                                               placeholder="http:test1.ecmoban.com/seller_imgs/seller_logo/seller_logo1.jpg"
                                               style="width:500px">
                                     </el-input>
-                                    <el-button type="primary" round @click="">上传</el-button>
+                                    <el-button type="primary" round class="blue">上传</el-button>
                                 </div>
                             </el-form-item>
                             <el-form-item label="*开户行">
@@ -61,7 +61,7 @@
                     </el-form>
                 </div>
             </div>
-            <el-button type="primary" round @click="">确定</el-button>
+            <el-button type="primary" round class="blue">确定</el-button>
         </div>
     </div>
 </template>
@@ -111,6 +111,13 @@
         line-height: 46px;
         font-size: 12px;
         padding-left: 22px;
+    }
+    .content .blue {
+        height: 33px;
+        background: #30B5FE;
+        border: none;
+        box-shadow: 0 0 8px #30B5FE;
+        padding-top: 8px;
     }
 
 </style>

@@ -1,7 +1,10 @@
 <template>
     <div class="content">
         <div class="biaoti">
-            账户管理·<span style="color: #30d366">账户冻结</span>
+            <el-breadcrumb separator="·">
+                <el-breadcrumb-item :to="{ path: '/' }">账户管理</el-breadcrumb-item>
+                <el-breadcrumb-item><span style="color: #30d366;font-weight: bolder">账户冻结</span></el-breadcrumb-item>
+            </el-breadcrumb>
         </div>
         <div class="tongzhi">
             <div style="height: 52px;">
@@ -14,24 +17,23 @@
                 <div>多名用户投诉商家的商品包装有问题。</div>
                 <div class="text">
                     <el-form ref="form" :model="form" label-width="100px">
-                        <el-row style="width: 600px;">
-                            <el-form-item label="申请描述">
-                                    <textarea id="" cols="30" rows="10" v-model="form.desc"
-                                              style="width: 600px;height:120px;outline:none;resize:none;border-radius: 3px;border-color: #DCDFE6"></textarea>
+                        <el-row style="width: 500px;">
+                            <el-form-item label="申请描述：">
+                                    <textarea id="" cols="30" rows="10" v-model="form.desc" class="details"></textarea>
                             </el-form-item>
-                            <el-form-item label="凭证上传">
+                            <el-form-item label="凭证上传：">
                                 <div style="display: flex;justify-content: space-between">
                                     <el-input v-model="form.url">
                                     </el-input>
-                                    <el-button type="primary" round @click="">上传</el-button>
+                                    <el-button type="primary" round class="blue" style="margin-left:20px">上传照片</el-button>
                                 </div>
                             </el-form-item>
-                            <el-form-item label="审核状态">
+                            <el-form-item label="审核状态：">
                                 <div>暂无审核记录</div>
                             </el-form-item>
                         </el-row>
                     </el-form>
-                    <el-button type="primary" round @click="">申请</el-button>
+                    <el-button type="primary" round class="blue">申请</el-button>
                 </div>
 
             </div>
@@ -68,6 +70,10 @@
         margin-bottom: 5px;
     }
 
+    .content .tongzhi {
+        width: 100%;
+    }
+
     .tongzhi .message {
         padding-left: 20px;
         box-sizing: border-box;
@@ -76,7 +82,22 @@
     }
 
     .message .text {
-        margin-top: 27px;
-
+        margin-top: 30px;
+    }
+    .content .blue {
+        height: 33px;
+        background: #30B5FE;
+        border: none;
+        box-shadow: 0 0 8px #30B5FE;
+        padding-top: 10px;
+    }
+    .text .details{
+        width: 500px;
+        height:120px;
+        outline:none;
+        resize:none;
+        border-radius: 5px;
+        background: #f3faff;
+        border:2px solid #e5eff8;
     }
 </style>

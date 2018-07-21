@@ -1,34 +1,34 @@
 <template>
     <div>
-        <div style="width: 100%;min-height: 600px;">
-            <!--侧边栏-->
-            <div class="aside">
-                <div class="logo"></div>
-                <ul class="aside-list">
-                    <li>
-                        <div class="col-box"></div>
-                        <router-link to="/shop">店铺信息</router-link>
-                    </li>
-                    <li>
-                        <div class="col-box"></div>
-                        <router-link to="/shop/ShopPicture">店铺图片设置</router-link>
-                    </li>
-                    <li>
-                        <div class="col-box"></div>
-                        <router-link to="/shop/ShopActivity">店铺活动</router-link>
-                    </li>
-                    <li>
-                        <div class="col-box"></div>
-                        <router-link to="/shop/ShopCoupon">优惠券管理</router-link>
-                    </li>
-                    <li>
-                        <div class="col-box"></div>
-                        <router-link to="/shop/ShopConsult">咨询管理</router-link>
-                    </li>
-                </ul>
-            </div>
-            <!--主内容-->
-            <div class="content">
+        <!--侧边栏-->
+        <div class="aside">
+            <div class="logo"></div>
+            <ul class="aside-list">
+                <li>
+                    <div class="col-box"></div>
+                    <router-link to="/shop">店铺信息</router-link>
+                </li>
+                <li>
+                    <div class="col-box"></div>
+                    <router-link to="/shop/ShopPicture">店铺图片设置</router-link>
+                </li>
+                <li>
+                    <div class="col-box"></div>
+                    <router-link to="/shop/ShopActivity">店铺活动</router-link>
+                </li>
+                <li>
+                    <div class="col-box"></div>
+                    <router-link to="/shop/ShopCoupon">优惠券管理</router-link>
+                </li>
+                <li>
+                    <div class="col-box"></div>
+                    <router-link to="/shop/ShopConsult">咨询管理</router-link>
+                </li>
+            </ul>
+        </div>
+        <!--主内容-->
+        <div class="main-content">
+            <div style="width: 1064px;margin:0 auto">
                 <div class="biaoti">
                     <el-breadcrumb separator="·">
                         <el-breadcrumb-item :to="{ path: '/' }">店铺管理</el-breadcrumb-item>
@@ -186,44 +186,14 @@
 </script>
 
 <style scoped>
-    .aside {
-        width: 12%;
-        min-height: 800px;
-        background: #1f262c;
-        float: left;
-        position: fixed;
-        top: 0;
-        left: 0;
-    }
-
-    .aside .logo {
-        width: 100%;
-        height: 125px;
-        background: url("../../assets/img/logo.png") no-repeat center center/100% auto;
-    }
-
-    .aside-list li {
-        width: 100%;
-        height: 72px;
-        line-height: 72px;
-    }
-
-    .content {
-        width: 88%;
-        height: 100%;
-        padding-left: 200px;
-        box-sizing: border-box;
-        margin-top: 60px;
-    }
-
-    .content .biaoti {
+    .main-content .biaoti {
         height: 52px;
         font-size: 12px;
         line-height: 52px;
         font-weight: bolder;
     }
 
-    .content .bottom {
+    .main-content .bottom {
         width: 100%;
     }
 
@@ -259,14 +229,14 @@
         font-size: 12px;
     }
 
-    .content .red {
+    .main-content .red {
         height: 35px;
         background: #FD5E4E;
         border: none;
         box-shadow: 0 0px 8px #FD5E4E;
     }
 
-    .content .green {
+    .main-content .green {
         height: 35px;
         background: #37DF73;
         border: none;
